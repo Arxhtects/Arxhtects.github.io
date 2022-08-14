@@ -358,5 +358,15 @@ function loadingLoop(str) {
     $('.data-header > div > a').removeClass('active');
     $(this).addClass('active');
   });
+
+  $('#close').on('click', function() {
+    ('body').removeClass("show-data");
+    ('body').addClass("z-index");
+    ('body').addClass("load-data");
+    let timerId = setTimeout(function tick() {
+        $('body').removeClass('z-index');
+        $('body').removeClass('load-data');
+      }, 500);
+  });
 });
 
