@@ -1,4 +1,7 @@
 import { CID } from "../modules/cid.bundlecid.bundle.js";
+
+import("./modules/cid.bundle.js").then((module) => { console.log('loaded cid module'); console.log(module); });
+
 $(document).ready(function() {
 const bananoJs = window.bananocoinBananojs;
 bananoJs.setBananodeApiUrl('https://kaliumapi.appditto.com/api');
