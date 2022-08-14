@@ -321,7 +321,6 @@ async function checkUrl() {
 }
 
 //ban_3i9hw6xuiqwgnkbmszyadubsynjysntsw6tkk98tg7qfj3f8nwzaqtkc5pw3
-//TODO BREAK IT DAMN IT
 var loopTimer;
 function loadingLoop(str) {
   let copy = str.split(",");
@@ -366,13 +365,12 @@ function loadingLoop(str) {
     $('body').removeClass("show-data");
     $('body').addClass("z-index");
     $('body').addClass("load-data");
-    let timerId = setTimeout(function tick() {
-        $('body').addClass("show-main");
+      setTimeout(function tick() {
         $('body').removeClass('z-index');
         $('body').removeClass('load-data');
       }, 600);
       setTimeout(function ticksecond() {
-          $('body').removeClass("show-main");
+          $('body').addClass("show-main");
       }, 1600);
   });
 });
