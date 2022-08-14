@@ -292,9 +292,11 @@ function buidPage(nftBlocks, nftMeta) {
     });
     $('body').addClass('show-data');
     $("#data").addClass("show");
+    $(".outer").addClass("hide");
     clearTimeout(loopTimer);
     let timerId = setTimeout(function tick() {
         $('body').removeClass('z-index');
+        $('body').removeClass("show-data");
         $('body').removeClass('load-data');
       }, 2000);
   }
@@ -362,13 +364,11 @@ function loadingLoop(str) {
   });
 
   $('#close').on('click', function() {
-    $('body').removeClass("show-data");
-    setTimeout(function tick() {
-      $('#data').removeClass("show");
       $('body').addClass("z-index");
       $('body').addClass("load-data");
-    }, 400);
-    setTimeout(function ticktwo() {
+    setTimeout(function tick() {
+      $(".outer").removeClass("hide");
+      $('#data').removeClass("show");
       $('body').removeClass('z-index');
       $('body').removeClass('load-data');
       $('body').addClass("show-main");
