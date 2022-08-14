@@ -360,13 +360,17 @@ function loadingLoop(str) {
   });
 
   $('#close').on('click', function() {
-    ('body').removeClass("show-data");
-    ('body').addClass("z-index");
-    ('body').addClass("load-data");
+    $('body').removeClass("show-data");
+    $('body').addClass("z-index");
+    $('body').addClass("load-data");
     let timerId = setTimeout(function tick() {
+        $('body').addClass("show-main");
         $('body').removeClass('z-index');
         $('body').removeClass('load-data');
-      }, 500);
+      }, 600);
+      setTimeout(function ticksecond() {
+          $('body').removeClass("show-main");
+      }, 1600);
   });
 });
 

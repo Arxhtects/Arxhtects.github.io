@@ -568,7 +568,7 @@ footer {
   .z-index & {
     z-index: 99;
   }
-  .show-data & {
+  .show-data &, .show-main & {
     top: 100vh !important;
     .shapeTop {
         transition-delay: 0.4s;
