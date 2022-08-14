@@ -374,7 +374,8 @@ function loadingLoop(str) {
     }, 1000);
     setTimeout(function tickthree() {
       $('body').removeClass('z-index');
-    }, 1200);
+      $('body').removeClass("show-main");
+    }, 2000);
   });
 });
 
