@@ -369,12 +369,12 @@ function loadingLoop(str) {
     setTimeout(function tick() {
       $(".outer").removeClass("hide");
       $('#data').removeClass("show");
-      $('body').removeClass('z-index');
       $('body').removeClass('load-data');
       $('body').addClass("show-main");
-    }, 2000);
-    // setTimeout(function tickthree() {
-    // }, 2000);
+    }, 1000);
+    setTimeout(function tickthree() {
+      $('body').removeClass('z-index');
+    }, 1200);
   });
 });
 
