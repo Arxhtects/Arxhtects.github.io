@@ -684,9 +684,11 @@ footer {
     align-items: center;
     opacity: 0;
     pointer-events: none;
+    display: none;
     &.show {
       opacity: 1;
       pointer-events: all;
+      display: none;
       .wrapper {
         opacity: 1;
         transition-delay: 0.7s;
