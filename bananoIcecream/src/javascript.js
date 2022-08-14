@@ -363,15 +363,18 @@ function loadingLoop(str) {
 
   $('#close').on('click', function() {
     $('body').removeClass("show-data");
-    $('body').addClass("z-index");
-    $('body').addClass("load-data");
-      setTimeout(function tick() {
-        $('body').removeClass('z-index');
-        $('body').removeClass('load-data');
-      }, 600);
-      setTimeout(function ticksecond() {
-          $('body').addClass("show-main");
-      }, 1600);
+    setTimeout(function tick() {
+      $('#data').removeClass("show");
+      $('body').addClass("z-index");
+      $('body').addClass("load-data");
+    }, 400);
+    setTimeout(function ticktwo() {
+      $('body').removeClass('z-index');
+      $('body').removeClass('load-data');
+      $('body').addClass("show-main");
+    }, 2000);
+    // setTimeout(function tickthree() {
+    // }, 2000);
   });
 });
 

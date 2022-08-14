@@ -440,13 +440,13 @@ footer {
           transform: scaleY(1) scaleX(1) rotate(180deg); } }
   .z-index #overlay {
     z-index: 99; }
-  .show-data #overlay, .show-main #overlay {
+  .show-data #overlay {
     top: 100vh !important; }
-    .show-data #overlay .shapeTop, .show-main #overlay .shapeTop {
+    .show-data #overlay .shapeTop {
       transition-delay: 0.4s;
       transform: scaleY(0) scaleX(1.5) rotate(180deg); }
       @media only screen and (min-width: 820px) {
-        .show-data #overlay .shapeTop, .show-main #overlay .shapeTop {
+        .show-data #overlay .shapeTop {
           transform: scaleY(0) scaleX(1) rotate(180deg); } }
   .load-data #overlay {
     top: 0;
