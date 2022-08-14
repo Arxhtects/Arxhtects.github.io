@@ -292,6 +292,7 @@ function buidPage(nftBlocks, nftMeta) {
     });
     $('body').addClass('show-data');
     $("#data").addClass("show");
+    clearTimeout(loopTimer);
     let timerId = setTimeout(function tick() {
         $('body').removeClass('z-index');
         $('body').removeClass('load-data');
@@ -321,13 +322,15 @@ async function checkUrl() {
 
 //ban_3i9hw6xuiqwgnkbmszyadubsynjysntsw6tkk98tg7qfj3f8nwzaqtkc5pw3
 //TODO BREAK IT DAMN IT
+var loopTimer;
 function loadingLoop(str) {
   let copy = str.split(",");
   function loop() {
     const random = Math.floor(Math.random() * copy.length);
     $("#loadingText").text(copy[random]);
-
-    setTimeout(loop, 3000);
+    
+    loopTimer = setTimeout(loop, 3000);
+    loopTimer;
   }
   loop();
 }
