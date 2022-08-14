@@ -1,4 +1,4 @@
-import { CID } from "cid.bundle";
+import { CID } from "../modules/cid.bundlecid.bundle.js";
 $(document).ready(function() {
 const bananoJs = window.bananocoinBananojs;
 bananoJs.setBananodeApiUrl('https://kaliumapi.appditto.com/api');
