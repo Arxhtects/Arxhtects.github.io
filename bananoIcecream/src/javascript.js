@@ -1,4 +1,3 @@
-import { CID } from "../modules/cid.bundlecid.bundle.js";
 
 import("./modules/cid.bundle.js").then((module) => { console.log('loaded cid module'); console.log(module); });
 
