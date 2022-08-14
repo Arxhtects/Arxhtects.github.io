@@ -409,6 +409,7 @@ footer {
       padding-bottom: 50px; } }
 
 #overlay {
+  display: none;
   position: fixed;
   top: -100vh;
   left: 0;
@@ -441,6 +442,7 @@ footer {
   .z-index #overlay {
     z-index: 99; }
   .show-data #overlay, .show-main #overlay {
+    display: block;
     top: 100vh !important; }
     .show-data #overlay .shapeTop, .show-main #overlay .shapeTop {
       transition-delay: 0.4s;
@@ -449,6 +451,7 @@ footer {
         .show-data #overlay .shapeTop, .show-main #overlay .shapeTop {
           transform: scaleY(0) scaleX(1) rotate(180deg); } }
   .load-data #overlay {
+    display: block;
     top: 0;
     transition-delay: 0.4s; }
     .load-data #overlay .shape {
@@ -539,7 +542,7 @@ footer {
   #data.show {
     opacity: 1;
     pointer-events: all;
-    display: none; }
+    display: block; }
     #data.show .wrapper {
       opacity: 1;
       transition-delay: 0.7s;

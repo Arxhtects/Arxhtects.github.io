@@ -532,6 +532,7 @@ footer {
 //DATA 
 
 #overlay {
+  display: none;
   position: fixed;
   top: -100vh; 
   left: 0;
@@ -569,6 +570,7 @@ footer {
     z-index: 99;
   }
   .show-data &, .show-main & {
+    display: block;
     top: 100vh !important;
     .shapeTop {
         transition-delay: 0.4s;
@@ -579,6 +581,7 @@ footer {
       }
   }
   .load-data & {
+    display: block;
     top: 0;
     transition-delay: 0.4s;
     .shape {
@@ -688,7 +691,7 @@ footer {
     &.show {
       opacity: 1;
       pointer-events: all;
-      display: none;
+      display: block;
       .wrapper {
         opacity: 1;
         transition-delay: 0.7s;
