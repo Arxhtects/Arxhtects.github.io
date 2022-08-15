@@ -291,6 +291,7 @@ function buidPage(nftBlocks, nftMeta) {
       }
     });
     $('body').addClass('show-data');
+    $('body').removeClass('loading');
     $("#data").addClass("show");
     $(".outer").addClass("hide");
     clearTimeout(loopTimer);
@@ -342,6 +343,7 @@ function loadingLoop(str) {
       //TODO Check if valid acc, unless ive already written that in the main function .. probably
       $('body').addClass('z-index');
       $('body').addClass('load-data');
+      $('body').addClass('loading');
       loadingLoop(loadingText);
       getNFTBlocksForAccount(val);
       console.log('wait a sec');

@@ -440,9 +440,9 @@ footer {
         #overlay svg.shapeTop {
           transform: scaleY(1) scaleX(1) rotate(180deg); } }
   .z-index #overlay {
+    display: block;
     z-index: 99; }
   .show-data #overlay, .show-main #overlay {
-    display: block;
     top: 100vh !important; }
     .show-data #overlay .shapeTop, .show-main #overlay .shapeTop {
       transition-delay: 0.4s;
@@ -451,7 +451,6 @@ footer {
         .show-data #overlay .shapeTop, .show-main #overlay .shapeTop {
           transform: scaleY(0) scaleX(1) rotate(180deg); } }
   .load-data #overlay {
-    display: block;
     top: 0;
     transition-delay: 0.4s; }
     .load-data #overlay .shape {
@@ -467,7 +466,11 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 400px; }
+    max-width: 400px;
+    opacity: 0;
+    transition: all 0.45s ease-in-out; }
+    .loading #overlay .loading {
+      opacity: 1; }
     #overlay .loading div {
       text-align: center;
       color: white;
