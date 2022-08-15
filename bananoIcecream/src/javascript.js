@@ -374,10 +374,14 @@ function loadingLoop(str) {
       $('body').removeClass('load-data');
       $('body').addClass("show-main");
     }, 1000);
-    setTimeout(function tickthree() {
+    setTimeout(function ticktwo() {
       $('body').removeClass('z-index');
       $('body').removeClass("show-main");
+      $('body').addClass('hidden');
     }, 2000);
+    setTimeout(function tickthree() {
+      $('body').removeClass('hidden');
+    }, 3000);
   });
 });
 

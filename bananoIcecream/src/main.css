@@ -409,7 +409,6 @@ footer {
       padding-bottom: 50px; } }
 
 #overlay {
-  display: none;
   position: fixed;
   top: -100vh;
   left: 0;
@@ -439,8 +438,9 @@ footer {
       @media only screen and (min-width: 820px) {
         #overlay svg.shapeTop {
           transform: scaleY(1) scaleX(1) rotate(180deg); } }
+  .hidden #overlay {
+    display: none; }
   .z-index #overlay {
-    display: block;
     z-index: 99; }
   .show-data #overlay, .show-main #overlay {
     top: 100vh !important; }

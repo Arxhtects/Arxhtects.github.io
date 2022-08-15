@@ -532,7 +532,6 @@ footer {
 //DATA 
 
 #overlay {
-  display: none;
   position: fixed;
   top: -100vh; 
   left: 0;
@@ -566,8 +565,10 @@ footer {
       }
     }
   }
+  .hidden & {
+    display: none;
+  }
   .z-index & {
-    display: block;
     z-index: 99;
   }
   .show-data &, .show-main & {
