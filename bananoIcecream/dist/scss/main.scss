@@ -43,9 +43,6 @@ body {
   .darkmode & {
     color: $darkmodefont;
   }
-  @media only screen and (min-width: 820px) {
-    margin: 0px 20px;
-  }
   &.load-data {
     overflow: hidden;
   }
@@ -101,7 +98,7 @@ h5 {
 .outer {
   position: relative;
   opacity: 1;
-  max-width: 1650px;
+  max-width: 1440px;
   background: $lightBlueWhite;
   .darkmode & {
     background: $darkbg;

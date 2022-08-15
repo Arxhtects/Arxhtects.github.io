@@ -9,9 +9,6 @@ body {
   color: #313131; }
   .darkmode body {
     color: #eef1f7; }
-  @media only screen and (min-width: 820px) {
-    body {
-      margin: 0px 20px; } }
   body.load-data {
     overflow: hidden; }
 
@@ -59,7 +56,7 @@ h5 {
 .outer {
   position: relative;
   opacity: 1;
-  max-width: 1650px;
+  max-width: 1440px;
   background: #F1FCFF;
   margin: 0 auto;
   top: 0px;
