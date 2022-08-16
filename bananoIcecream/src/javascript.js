@@ -297,20 +297,22 @@ async function getNFTBlocksForAccount(account) {
 //ban_3i9hw6xuiqwgnkbmszyadubsynjysntsw6tkk98tg7qfj3f8nwzaqtkc5pw3
 function buidPage(nftBlocks, nftMeta) {
   if(nftBlocks.length >= 1) {
+    const nftList = [];
     for(let i = 0; i < nftBlocks.length; i++) {
-      //console.log(nftBlocks[i].length);
-      //console.log(nftBlocks[i]);
       if(nftBlocks[i].length >= 2) {
         //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
         for(let d = 0; d < nftBlocks[i].length; d++) {
-          $("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i][d]) + "</div>");
+          nftList.push(nftBlocks[i][d]);
+          //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i][d]) + "</div>");
           //console.log(nftBlocks[i][d][1].amountRaw);
         }
       } else {
-        $("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i][0]) + "</div>");
-        console.log(nftBlocks[i][0].amount);
+        nftList.push(nftBlocks[i]);
+        //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
       }
-      //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
+    }
+    for(let i = 0; i < nftList.length; i++) {
+      $("#data > .wrapper").append("<div>" + JSON.stringify(nftList[i]) + "</div>");
     }
     for(let i = 0; i < nftMeta.length; i++) {
       //console.log(nftBlocks[i][0].amount);
