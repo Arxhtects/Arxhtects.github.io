@@ -299,7 +299,7 @@ function buidPage(nftBlocks, nftMeta) {
   if(nftBlocks.length >= 1) {
     const nftList = [];
     for(let i = 0; i < nftBlocks.length; i++) {
-      if(nftBlocks[i].length >= 2) {
+      if(nftBlocks[i].length >= 2) { //split nfts from same rep
         //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
         for(let d = 0; d < nftBlocks[i].length; d++) {
           nftList.push(nftBlocks[i][d]);
@@ -312,7 +312,7 @@ function buidPage(nftBlocks, nftMeta) {
       }
     }
     for(let i = 0; i < nftList.length; i++) {
-      $("#data > .wrapper").append("<div>" + JSON.stringify(nftList[i]) + "</div>");
+      $("#data > .wrapper").append("<div data-subtype='" + nftList[i][0].subtype + "'>" + JSON.stringify(nftList[i]) + "</div>");
     }
     for(let i = 0; i < nftMeta.length; i++) {
       //console.log(nftBlocks[i][0].amount);
