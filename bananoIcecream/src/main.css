@@ -148,6 +148,8 @@ header {
         cursor: pointer;
         padding: 20px 90px;
         margin-right: 50px;
+        height: 25px;
+        top: 10px;
         transform: scale(1); }
         header .switch:hover {
           transform: scale(1.05); } }
@@ -173,13 +175,15 @@ header {
         content: '\f672'; }
         @media only screen and (min-width: 820px) {
           .darkmode header .switch:after {
-            left: calc(100% - 64px); } }
+            left: calc(100% - 64px);
+            border: solid 3px #444444; } }
       @media only screen and (min-width: 820px) {
         header .switch:after {
-          top: 7px;
-          left: 7px;
+          top: -7px;
+          left: 8px;
           width: 55px;
-          height: 53px; } }
+          height: 53px;
+          border: solid 3px #d5d5d5; } }
 
 .massive-padding {
   padding-top: 100px;
