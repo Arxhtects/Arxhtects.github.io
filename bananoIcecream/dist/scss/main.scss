@@ -862,12 +862,14 @@ footer {
   div {
     margin-bottom: 0px !important;
   }
+  display: flex;
+  flex-flow: row wrap;
   width: 100% !important;
   background: whitesmoke;
   border-radius: 26px 26px 0px 0px;
   box-shadow: $inset;
   .left-wrap {
-    width: calc(25% - 60px);
+    width: calc(25% - 60px) !important;
     background: whitesmoke;
     padding: 30px;
     border-radius: 26px 0px 26px 0px;
@@ -892,7 +894,7 @@ footer {
     padding: 30px;
   }
   .end {
-    width: 10%;
+    width: 10% !important;
   }
   .json-wrap {
     padding: 0px;

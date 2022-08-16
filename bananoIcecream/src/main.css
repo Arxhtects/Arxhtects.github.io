@@ -684,6 +684,8 @@ footer {
       margin-bottom: 30px; }
 
 .metabox {
+  display: flex;
+  flex-flow: row wrap;
   width: 100% !important;
   background: whitesmoke;
   border-radius: 26px 26px 0px 0px;
@@ -691,7 +693,7 @@ footer {
   .metabox div {
     margin-bottom: 0px !important; }
   .metabox .left-wrap {
-    width: calc(25% - 60px);
+    width: calc(25% - 60px) !important;
     background: whitesmoke;
     padding: 30px;
     border-radius: 26px 0px 26px 0px; }
@@ -712,7 +714,7 @@ footer {
     width: calc(60% - 60px) !important;
     padding: 30px; }
   .metabox .end {
-    width: 10%; }
+    width: 10% !important; }
   .metabox .json-wrap {
     padding: 0px;
     width: 100% !important;
