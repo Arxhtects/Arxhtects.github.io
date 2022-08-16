@@ -303,9 +303,11 @@ function buidPage(nftBlocks, nftMeta) {
         //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
         for(let d = 0; d < nftBlocks[i].length; d++) {
           $("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i][d]) + "</div>");
+          console.log(nftBlocks[i][d][0].subtype);
         }
       } else {
-        $("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
+        $("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i][0]) + "</div>");
+        console.log(nftBlocks[i][0].subtype);
       }
       //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
     }
