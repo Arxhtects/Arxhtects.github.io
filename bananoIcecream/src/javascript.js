@@ -1,5 +1,5 @@
 // import multiformats from 'https://cdn.skypack.dev/multiformats';
-import { CID } from '../modules/multiformats.bundle.js';
+import { CID as CID } from '../modules/multiformats.bundle.js';
 
 $(document).ready(function() {
 const bananoJs = window.bananocoinBananojs;
