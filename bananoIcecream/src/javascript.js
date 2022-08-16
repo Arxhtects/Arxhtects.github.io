@@ -312,7 +312,7 @@ function buidPage(nftBlocks, nftMeta) {
       }
     }
     for(let i = 0; i < nftList.length; i++) {
-      console.log(nftList[i]);
+      console.log(nftList[i].contents);
       $("#data > .wrapper").append("<div class='metabox' data-subtype='" + nftList[i]['subtype'] + "'><div class='left-wrap'><div class='type " + nftList[i]['subtype'] + "'><span>SubType</span><h4>" + nftList[i]['subtype'] + "</h4></div><div class='card'><h4><span>height<br />" + nftList[i]['height'] + "</h4><h4><span>Confirmed<br />" + nftList[i]['confirmed'] + "</h4><h4><span>Type<br /> + nftList[i].contents['type'] + </h4></div></div><div class='info-wrap'><h4><span>BlockAccount</span><br />" + nftList[i]['blockAccount'] +"</h4><h4><span>Representative</span><br /> + nftList[i].contents['representative'] + </h4><h4><span>Hash</span><br />" + nftList[i]['hash'] +"</h4><h4><span>Link</span><br /> + nftList[i].contents['link'] + </h4><h4><span>Previous</span><br /> + nftList[i].contents['previous'] + </h4></div><div class='end'><h4 class='view-jsonraw'><span>View</span><br />Raw Json</h4></div><div class='json-wrap'>" + JSON.stringify(nftList[i]) + "</div></div>");
     }
     for(let i = 0; i < nftMeta.length; i++) {

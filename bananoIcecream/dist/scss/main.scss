@@ -726,6 +726,7 @@ footer {
       margin-top: 30px;
       margin-bottom: 30px;
       @media only screen and (min-width: 820px) {
+        width: calc(100% - 10px);
         padding: 60px;
         border-radius: 26px;
         margin-top: 60px;
@@ -855,4 +856,49 @@ footer {
         margin-bottom: 30px;
       }
     }
+}
+
+.metabox {
+  div {
+    margin-bottom: 0px !important;
+  }
+  width: calc(30% - 60px);
+  background: whitesmoke;
+  padding: 30px;
+  border-radius: 26px 26px 0px 0px;
+  box-shadow: $inset;
+  .left-wrap {
+    width: calc(25% - 60px);
+    background: whitesmoke;
+    padding: 30px;
+    border-radius: 26px 0px 26px 0px;
+    .card {
+      padding: 30px;
+      border-radius: 26px;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 150px;
+      background: $berryPinkGradient;
+      width: calc(100% - 70px);
+      h4 {
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+  .info-wrap {
+    width: calc(60% - 60px);
+    padding: 30px;
+  }
+  .end {
+    width: 10%;
+  }
+  .json-wrap {
+    padding: 0px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+  }
 }
