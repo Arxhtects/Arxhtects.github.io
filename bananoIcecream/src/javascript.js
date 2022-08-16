@@ -21,9 +21,9 @@ const loadingText = $("#loadingText").attr("data-text");
 //Todo: Cache
 //-cookies
 
-function setCookie(cname,cvalue) {
+function setCookie(cname,cvalue,exdays) {
   const d = new Date();
-  d.setTime(d.getTime() + (24*60*60*1000));
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
   let expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
@@ -45,7 +45,7 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  let darkmode = getCookie("darkmode");
+  let darkmode = getCookie("bananoicecreamdarkmode");
   if (darkmode != "") {
     $('body').addClass('darkmode');
   }
@@ -391,11 +391,11 @@ function loadingLoop(str) {
   $('.switch').on("click", function() {
     if ($("body").hasClass("darkmode")) {
       $('body').removeClass('darkmode');
-      setCookie("darkmode", "", 30);
+      setCookie("bananoicecreamdarkmode", "", 30);
       console.log('cookie unset');
     } else {
       $('body').addClass('darkmode');
-      setCookie("darkmode", "true", 30);
+      setCookie("bananoicecreamdarkmode", "true", 30);
       console.log('cookie set');
     }
   });
