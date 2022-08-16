@@ -2,6 +2,9 @@
 import { CID } from 'https://cdn.skypack.dev/multiformats/cid';
 
 $(document).ready(function() {
+  
+checkCookie();
+
 const bananoJs = window.bananocoinBananojs;
 bananoJs.setBananodeApiUrl('https://kaliumapi.appditto.com/api');
 
@@ -17,6 +20,36 @@ const timeoutId = setTimeout(() => abortControl.abort(), 1000);
 const loadingText = $("#loadingText").attr("data-text");
 //Todo: Cache
 //-cookies
+
+function setCookie(cname,cvalue) {
+  const d = new Date();
+  d.setTime(d.getTime() + (24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let darkmode = getCookie("darkmode");
+  if (darkmode != "") {
+    $('body').addClass('darkmode');
+  }
+}
 
 //get current online representatives for  for valid accounts
 async function getReps() {
@@ -356,7 +389,15 @@ function loadingLoop(str) {
   checkUrl();
 
   $('.switch').on("click", function() {
-    $('body').toggleClass('darkmode');
+    if ($("body").hasClass("darkmode")) {
+      $('body').removeClass('darkmode');
+      setCookie("darkmode", "", 30);
+      console.log('cookie unset');
+    } else {
+      $('body').addClass('darkmode');
+      setCookie("darkmode", "true", 30);
+      console.log('cookie set');
+    }
   });
   
   $('.data-header > div > a').on("click", function() {
