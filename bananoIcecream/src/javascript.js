@@ -1,5 +1,5 @@
 // import multiformats from 'https://cdn.skypack.dev/multiformats';
-//import { CID } from 'https://cdn.skypack.dev/multiformats/cid';
+import { CID } from 'https://cdn.skypack.dev/multiformats/cid';
 
 $(document).ready(function() {
 const bananoJs = window.bananocoinBananojs;
@@ -52,10 +52,10 @@ async function getBlockHeight(account) {
   return data['confirmation_height'];
 }
 
-async function covertCID(account) {
+function covertCID(account) {
   let data = bananoJs.getAccountPublicKey(account);
   data = bs58.encode(bananoUtil.hexToBytes('1220' + data));
-  data = await Hash.of(data);
+  data = CID.parse(data);
   data = data.toString();
   return data;
 }
