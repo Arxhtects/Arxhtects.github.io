@@ -862,9 +862,8 @@ footer {
   div {
     margin-bottom: 0px !important;
   }
-  width: calc(30% - 60px);
+  width: 100% !important;
   background: whitesmoke;
-  padding: 30px;
   border-radius: 26px 26px 0px 0px;
   box-shadow: $inset;
   .left-wrap {
@@ -881,7 +880,7 @@ footer {
       align-items: center;
       min-height: 150px;
       background: $berryPinkGradient;
-      width: calc(100% - 70px);
+      width: calc(100% - 70px) !important;
       h4 {
         margin: 0;
         color: white;
@@ -889,7 +888,7 @@ footer {
     }
   }
   .info-wrap {
-    width: calc(60% - 60px);
+    width: calc(60% - 60px) !important;
     padding: 30px;
   }
   .end {
@@ -897,7 +896,7 @@ footer {
   }
   .json-wrap {
     padding: 0px;
-    width: 100%;
+    width: 100% !important;
     max-height: 0px;
     overflow: hidden;
   }

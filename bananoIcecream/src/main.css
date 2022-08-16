@@ -684,9 +684,8 @@ footer {
       margin-bottom: 30px; }
 
 .metabox {
-  width: calc(30% - 60px);
+  width: 100% !important;
   background: whitesmoke;
-  padding: 30px;
   border-radius: 26px 26px 0px 0px;
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19); }
   .metabox div {
@@ -705,18 +704,18 @@ footer {
       align-items: center;
       min-height: 150px;
       background: linear-gradient(to right top, #f591a1, #f87da1, #f869a6, #f454b0, #eb3fbe);
-      width: calc(100% - 70px); }
+      width: calc(100% - 70px) !important; }
       .metabox .left-wrap .card h4 {
         margin: 0;
         color: white; }
   .metabox .info-wrap {
-    width: calc(60% - 60px);
+    width: calc(60% - 60px) !important;
     padding: 30px; }
   .metabox .end {
     width: 10%; }
   .metabox .json-wrap {
     padding: 0px;
-    width: 100%;
+    width: 100% !important;
     max-height: 0px;
     overflow: hidden; }
 
