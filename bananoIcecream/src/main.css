@@ -176,14 +176,14 @@ header {
         @media only screen and (min-width: 820px) {
           .darkmode header .switch:after {
             left: calc(100% - 64px);
-            border: solid 3px #444444; } }
+            border: solid 3px #343436; } }
       @media only screen and (min-width: 820px) {
         header .switch:after {
           top: -7px;
           left: 8px;
           width: 55px;
           height: 53px;
-          border: solid 3px #d5d5d5; } }
+          border: solid 3px #a9a9a9; } }
 
 .massive-padding {
   padding-top: 100px;
@@ -339,7 +339,9 @@ header {
           border-bottom: 0px; } }
 
 ul {
-  padding-left: 50px; }
+  padding-left: 50px;
+  max-height: 500px;
+  overflow-y: auto; }
   ul li {
     font-size: 22px;
     color: #9F9F9F;
