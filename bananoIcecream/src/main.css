@@ -146,7 +146,7 @@ header {
       header .switch {
         transition: all 0.45s ease-in-out;
         cursor: pointer;
-        padding: 20px 90px;
+        padding: 10px 90px;
         margin-right: 50px;
         height: 25px;
         top: 10px;
