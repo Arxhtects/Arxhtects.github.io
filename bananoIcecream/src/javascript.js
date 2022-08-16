@@ -313,7 +313,7 @@ function buidPage(nftBlocks, nftMeta) {
     }
     for(let i = 0; i < nftList.length; i++) {
       console.log(nftList[i]);
-      $("#data > .wrapper").append("<div data-subtype='" + nftList[i][0].amount + "'>" + JSON.stringify(nftList[i]) + "</div>");
+      $("#data > .wrapper").append("<div>" + JSON.stringify(nftList[i]) + "</div>");
     }
     for(let i = 0; i < nftMeta.length; i++) {
       //console.log(nftBlocks[i][0].amount);
