@@ -294,6 +294,7 @@ async function getNFTBlocksForAccount(account) {
   return nftBlocks;
 }
 
+//ban_3i9hw6xuiqwgnkbmszyadubsynjysntsw6tkk98tg7qfj3f8nwzaqtkc5pw3
 function buidPage(nftBlocks, nftMeta) {
   if(nftBlocks.length >= 1) {
     for(let i = 0; i < nftBlocks.length; i++) {
@@ -303,7 +304,7 @@ function buidPage(nftBlocks, nftMeta) {
         //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
         for(let d = 0; d < nftBlocks[i].length; d++) {
           $("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i][d]) + "</div>");
-          console.log(nftBlocks[i][d][0].subtype);
+          //console.log(nftBlocks[i][d][0].subtype);
         }
       } else {
         $("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i][0]) + "</div>");
