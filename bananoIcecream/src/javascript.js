@@ -407,8 +407,9 @@ function loadingLoop(str) {
   });
   
   
-  $('.data-header > div > a.active').on("click", function() {
+  $('.active').on("click", function() {
     $('.data-header > div > a').removeClass('active');
+    $(".metabox").removeClass('hide');
   });
 
   $('.data-header > div > a').on("click", function() {
@@ -421,7 +422,7 @@ function loadingLoop(str) {
   });
 
   $(".view-jsonraw").on("click", function() {
-    $(this).parent().parent().find('.json-wrap').toggleClass('active');
+    $(this).parent().next().toggleClass('active');
   });
 
   $('#close').on('click', function() {
