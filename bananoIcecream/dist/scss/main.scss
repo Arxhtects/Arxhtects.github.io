@@ -857,6 +857,10 @@ footer {
 }
 
 .metabox {
+  &.hide {
+    display: none;
+  }
+
   div {
     margin-bottom: 0px !important;
   }
@@ -989,9 +993,16 @@ footer {
     padding-bottom: 30px;
     align-items: end;
     h4 {
+      cursor: pointer;
       position: relative;
       padding-left: 55px;
+      &:hover {
+        &:before {
+          left: -15px;
+        }
+      }
       &:before {
+        transition: $transition;
         content: '\e48a';
         color: white;
         font-weight: 300;
@@ -1002,7 +1013,7 @@ footer {
         background: $gradient;
         box-shadow: $inset;
         border-radius: 16px;
-        left: 0;
+        left: 0px;
         top: 50%;
         transform: translateY(-50%);
         display: flex;

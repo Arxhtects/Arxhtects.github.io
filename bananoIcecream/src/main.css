@@ -688,6 +688,8 @@ footer {
   border-radius: 26px;
   position: relative;
   z-index: 1; }
+  .metabox.hide {
+    display: none; }
   .metabox div {
     margin-bottom: 0px !important; }
   .darkmode .metabox {
@@ -788,9 +790,13 @@ footer {
     padding-bottom: 30px;
     align-items: end; }
     .metabox .end h4 {
+      cursor: pointer;
       position: relative;
       padding-left: 55px; }
+      .metabox .end h4:hover:before {
+        left: -15px; }
       .metabox .end h4:before {
+        transition: all 0.45s ease-in-out;
         content: '\e48a';
         color: white;
         font-weight: 300;
@@ -801,7 +807,7 @@ footer {
         background: linear-gradient(144deg, #f1c667 0%, #f9d687 100%);
         box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19);
         border-radius: 16px;
-        left: 0;
+        left: 0px;
         top: 50%;
         transform: translateY(-50%);
         display: flex;

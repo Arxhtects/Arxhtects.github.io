@@ -411,7 +411,11 @@ function loadingLoop(str) {
     $('.data-header > div > a').removeClass('active');
     if (!$(this).hasClass("active")) {
       $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
     }
+    $("metabox").addClass('hide');
+    $('metabox').find("[data-subtype='" + value + "']").removeClass('hide'); 
   });
 
   $('#close').on('click', function() {
