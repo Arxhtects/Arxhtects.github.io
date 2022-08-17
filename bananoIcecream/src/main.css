@@ -558,14 +558,13 @@ footer {
     position: relative;
     transition: all 0.45s ease-in-out;
     background: #F1FCFF;
-    width: calc(100% - 60px);
+    width: 100%;
     max-width: 1500px;
     height: auto;
     top: -100vh;
     max-width: 1440px;
     display: flex;
     flex-flow: column;
-    padding: 30px;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px; }
@@ -573,7 +572,7 @@ footer {
       background: #131921; }
     @media only screen and (min-width: 820px) {
       #data .wrapper {
-        width: calc(100% - 10px);
+        width: calc(100% - 120px);
         padding: 60px;
         border-radius: 26px;
         margin-top: 60px;
@@ -582,10 +581,8 @@ footer {
       margin-bottom: 50px;
       display: flex;
       flex-flow: row;
-      align-items: center; }
-      @media only screen and (min-width: 820px) {
-        #data .wrapper .data-header {
-          padding: 20px; } }
+      align-items: center;
+      padding: 20px; }
       #data .wrapper .data-header div {
         margin: 0;
         flex-flow: row;
@@ -702,17 +699,41 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 3; }
-  .metabox .type span {
-    font-size: 14px; }
-  .metabox .type h4 {
-    margin-top: 0px;
-    font-size: 30px;
-    text-transform: capitalize;
-    margin-bottom: 20px; }
+    z-index: 3;
+    pointer-events: none; }
+  .metabox .type {
+    position: relative;
+    padding-left: 55px; }
+    .metabox .type.receive:before {
+      content: '\f310'; }
+    .metabox .type.send:before {
+      content: '\f311'; }
+    .metabox .type:before {
+      content: '';
+      color: white;
+      font-weight: 300;
+      font-family: "Font Awesome 6 Pro";
+      position: absolute;
+      height: 45px;
+      width: 45px;
+      background: linear-gradient(144deg, #f1c667 0%, #f9d687 100%);
+      box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19);
+      border-radius: 16px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    .metabox .type span {
+      font-size: 14px; }
+    .metabox .type h4 {
+      margin-top: 0px;
+      font-size: 30px;
+      text-transform: capitalize;
+      margin-bottom: 20px; }
   .metabox h4 {
     font-size: 30px;
     line-height: 1.2; }
+    .metabox h4 span {
+      font-size: 15px; }
   .metabox .left-wrap {
     width: calc(30% - 60px) !important;
     background: #e0e2e9;

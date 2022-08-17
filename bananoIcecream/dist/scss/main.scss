@@ -711,7 +711,7 @@ footer {
       position: relative;
       transition: $transition;
       background: #F1FCFF;
-      width: calc(100% - 60px);
+      width: 100%;
       max-width: 1500px;
       .darkmode & {
         background: $darkbg;
@@ -721,12 +721,12 @@ footer {
       max-width: 1440px;    
       display: flex;
       flex-flow: column;
-      padding: 30px;
+      //padding: 30px;
       margin: 0 auto;    
       margin-top: 30px;
       margin-bottom: 30px;
       @media only screen and (min-width: 820px) {
-        width: calc(100% - 10px);
+        width: calc(100% - 120px);
         padding: 60px;
         border-radius: 26px;
         margin-top: 60px;
@@ -737,9 +737,7 @@ footer {
         display: flex;
         flex-flow: row;
         align-items: center;
-        @media only screen and (min-width: 820px) {
-          padding: 20px;
-        }
+        padding: 20px;
         div {    
           margin: 0;
           flex-flow: row;
@@ -879,8 +877,36 @@ footer {
     right: 0;
     bottom: 0;
     z-index: 3;
+    pointer-events: none;
   }
   .type {
+    position: relative;    
+    padding-left: 55px;
+    &.receive {
+      &:before {
+        content: '\f310';
+      }
+    }
+    &.send {
+      &:before {
+        content: '\f311';
+      }
+    }
+    &:before {
+      content: '';
+      color: white;
+      font-weight: 300;
+      font-family: $iconfont;
+      position: absolute;
+      height: 45px;
+      width: 45px;
+      background: $gradient;
+      box-shadow: $inset;
+      border-radius: 16px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
     span {
       font-size: 14px;
     }
@@ -894,6 +920,9 @@ footer {
   h4 {
     font-size: 30px;
     line-height: 1.2;
+    span {
+      font-size: 15px;
+    }
   }
   .left-wrap {
     width: calc(30% - 60px) !important;
