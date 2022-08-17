@@ -822,8 +822,8 @@ footer {
     overflow: hidden;
     transition: all 0.45s ease-in-out; }
     .metabox .json-wrap div {
-      padding: 20px;
-      width: calc(100% - 40px); }
+      padding: 40px;
+      width: calc(100% - 80px) !important; }
       .darkmode .metabox .json-wrap div {
         color: #eef1f7; }
     .metabox .json-wrap.active {
