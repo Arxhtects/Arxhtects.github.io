@@ -1029,5 +1029,15 @@ footer {
     width: 100% !important;
     max-height: 0px;
     overflow: hidden;
+    transition: $transition;
+    div {
+      padding: 20px;
+      .darkmode & {
+        color: $darkmodefont;
+      }
+    }
+    &.active {
+      max-height: 2000px;
+    }
   }
 }

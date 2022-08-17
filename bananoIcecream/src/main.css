@@ -819,6 +819,13 @@ footer {
     padding: 0px;
     width: 100% !important;
     max-height: 0px;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: all 0.45s ease-in-out; }
+    .metabox .json-wrap div {
+      padding: 20px; }
+      .darkmode .metabox .json-wrap div {
+        color: #eef1f7; }
+    .metabox .json-wrap.active {
+      max-height: 2000px; }
 
 /*# sourceMappingURL=main.css.map */
