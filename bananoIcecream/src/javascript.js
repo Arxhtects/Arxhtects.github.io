@@ -307,7 +307,7 @@ function buidPage(nftBlocks, nftMeta) {
           //console.log(nftBlocks[i][d][1].amountRaw);
         }
       } else {
-        nftList.push(nftBlocks[i]);
+        nftList.push(nftBlocks[i][0]);
         //$("#data > .wrapper").append("<div>" + JSON.stringify(nftBlocks[i]) + "</div>");
       }
     }
