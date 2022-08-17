@@ -687,16 +687,16 @@ footer {
   display: flex;
   flex-flow: row wrap;
   width: 100% !important;
-  background: whitesmoke;
-  border-radius: 26px 26px 0px 0px;
+  background: white;
+  border-radius: 26px;
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19); }
   .metabox div {
     margin-bottom: 0px !important; }
   .metabox .left-wrap {
-    width: calc(25% - 60px) !important;
+    width: calc(30% - 60px) !important;
     background: whitesmoke;
     padding: 30px;
-    border-radius: 26px 0px 26px 0px; }
+    border-radius: 26px 0px 0px 26px; }
     .metabox .left-wrap .card {
       padding: 30px;
       border-radius: 26px;
@@ -706,7 +706,8 @@ footer {
       align-items: center;
       min-height: 150px;
       background: linear-gradient(to right top, #f591a1, #f87da1, #f869a6, #f454b0, #eb3fbe);
-      width: calc(100% - 70px) !important; }
+      width: calc(100% - 70px) !important;
+      box-shadow: 0px 0px 50px rgba(84, 84, 84, 0.39); }
       .metabox .left-wrap .card h4 {
         margin: 0;
         color: white; }

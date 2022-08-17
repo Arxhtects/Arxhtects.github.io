@@ -865,14 +865,14 @@ footer {
   display: flex;
   flex-flow: row wrap;
   width: 100% !important;
-  background: whitesmoke;
-  border-radius: 26px 26px 0px 0px;
+  background: white;
+  border-radius: $radius;
   box-shadow: $inset;
   .left-wrap {
-    width: calc(25% - 60px) !important;
-    background: whitesmoke;
+    width: calc(30% - 60px) !important;
+    background: whitesmoke; //#e0e2e9;
     padding: 30px;
-    border-radius: 26px 0px 26px 0px;
+    border-radius: 26px 0px 0px 26px;
     .card {
       padding: 30px;
       border-radius: 26px;
@@ -883,6 +883,7 @@ footer {
       min-height: 150px;
       background: $berryPinkGradient;
       width: calc(100% - 70px) !important;
+      box-shadow: $boxshadow;
       h4 {
         margin: 0;
         color: white;
