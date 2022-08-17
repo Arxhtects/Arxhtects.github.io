@@ -409,13 +409,13 @@ function loadingLoop(str) {
   $('.data-header > div > a').on("click", function() {
     var value = $(this).attr('href');
     $('.data-header > div > a').removeClass('active');
-    if (!$(this).hasClass("active")) {
-      $(this).addClass('active');
-    } else {
+    if ($(this).hasClass("active")) {
       $(this).removeClass('active');
+    } else {
+      $(this).addClass('active');
     }
-    $("metabox").addClass('hide');
-    $('metabox').find("[data-subtype='" + value + "']").removeClass('hide'); 
+    $(".metabox").addClass('hide');
+    $('.metabox').find("[data-subtype='" + value + "']").removeClass('hide'); 
   });
 
   $('#close').on('click', function() {
