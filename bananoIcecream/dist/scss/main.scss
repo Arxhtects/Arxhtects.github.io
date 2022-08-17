@@ -980,12 +980,14 @@ footer {
     width: calc(55% - 60px) !important;
     padding: 30px;
   }
-  .end {
-    width: calc(15% - 20px) !important;    
+  .end {    
+    width: calc(15% - 30px) !important;
     display: flex;
     justify-content: end;
     flex-flow: column;
-    padding-right: 20px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    align-items: end;
     h4 {
       position: relative;
       padding-left: 55px;
