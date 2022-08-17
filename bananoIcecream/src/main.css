@@ -689,12 +689,33 @@ footer {
   width: 100% !important;
   background: white;
   border-radius: 26px;
-  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19); }
+  position: relative;
+  z-index: 1; }
   .metabox div {
     margin-bottom: 0px !important; }
+  .metabox:after {
+    content: '';
+    position: absolute;
+    border-radius: 26px;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3; }
+  .metabox .type span {
+    font-size: 14px; }
+  .metabox .type h4 {
+    margin-top: 0px;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 20px; }
+  .metabox h4 {
+    font-size: 30px;
+    line-height: 1.2; }
   .metabox .left-wrap {
     width: calc(30% - 60px) !important;
-    background: whitesmoke;
+    background: #e0e2e9;
     padding: 30px;
     border-radius: 26px 0px 0px 26px; }
     .metabox .left-wrap .card {

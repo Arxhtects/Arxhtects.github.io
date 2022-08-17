@@ -867,10 +867,37 @@ footer {
   width: 100% !important;
   background: white;
   border-radius: $radius;
-  box-shadow: $inset;
+  position: relative;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: $radius;
+    box-shadow: $inset;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+  .type {
+    span {
+      font-size: 14px;
+    }
+    h4 {
+      margin-top: 0px;
+      font-size: 30px;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+    }
+  }
+  h4 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
   .left-wrap {
     width: calc(30% - 60px) !important;
-    background: whitesmoke; //#e0e2e9;
+    background: #e0e2e9;
     padding: 30px;
     border-radius: 26px 0px 0px 26px;
     .card {
