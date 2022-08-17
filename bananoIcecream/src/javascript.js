@@ -313,12 +313,12 @@ function buidPage(nftBlocks, nftMeta) {
     }
     console.log(nftList);
     for(let i = 0; i < nftList.length; i++) {
-      $("#data > .wrapper").append("<div class='metabox' data-date='" + nftList[i]['timestamp'] + "'data-subtype='" + nftList[i]['subtype'] + "'><div class='left-wrap'><div class='type " + nftList[i]['subtype'] + "'><span>SubType</span><h4>" + nftList[i]['subtype'] + "</h4></div><div class='card'><h4><span>height</span><br />" + nftList[i]['height'] + "</h4><h4><span>Confirmed</span><br />" + nftList[i]['confirmed'] + "</h4><h4><span>Type</span><br />" + nftList[i].contents['type'] + "</h4></div></div><div class='info-wrap'><h4><span>BlockAccount</span><br />" + nftList[i]['blockAccount'] +"</h4><h4><span>Representative</span><br />" + nftList[i].contents['representative'] + "</h4><h4><span>Hash</span><br />" + nftList[i]['hash'] +"</h4><h4><span>Link</span><br />" + nftList[i].contents['link'] + "</h4><h4><span>Previous</span><br />" + nftList[i].contents['previous'] + "</h4></div><div class='end'><h4 class='view-jsonraw' onClick='Showme(" + i + ")'><span>View</span><br />Raw Json</h4></div><div class='json-wrap' id='json" + i + "'><div>" + JSON.stringify(nftList[i]) + "</div></div></div>");
+      $("#data > .wrapper").append("<div class='metabox' data-date='" + nftList[i]['timestamp'] + "'data-subtype='" + nftList[i]['subtype'] + "'><div class='left-wrap'><div class='type " + nftList[i]['subtype'] + "'><span>SubType</span><h4>" + nftList[i]['subtype'] + "</h4></div><div class='card'><h4><span>height</span><br />" + nftList[i]['height'] + "</h4><h4><span>Confirmed</span><br />" + nftList[i]['confirmed'] + "</h4><h4><span>Type</span><br />" + nftList[i].contents['type'] + "</h4></div></div><div class='info-wrap'><h4><span>BlockAccount</span><br />" + nftList[i]['blockAccount'] +"</h4><h4><span>Representative</span><br />" + nftList[i].contents['representative'] + "</h4><h4><span>Hash</span><br />" + nftList[i]['hash'] +"</h4><h4><span>Link</span><br />" + nftList[i].contents['link'] + "</h4><h4><span>Previous</span><br />" + nftList[i].contents['previous'] + "</h4></div><div class='end'><h4 class='view-jsonraw' onClick='Showme(json" + i + ")'><span>View</span><br />Raw Json</h4></div><div class='json-wrap' id='json" + i + "'><div>" + JSON.stringify(nftList[i]) + "</div></div></div>");
     }
     for(let i = 0; i < nftMeta.length; i++) {
       //console.log(nftBlocks[i][0].amount);
       //console.log(nftMeta[i]);
-      $("#data > .wrapper").append("<div class='metabox' data-subtype='nft'><div class='left-wrap'><div class='type nft'><span>SubType</span><h4>NFT Meta</h4></div><div class='card'><h4><span>Name</span><br />" + nftMeta[i]['name'] + "</h4></div></div><div class='info-wrap'><h4><span>description</span><br />" + nftMeta[i]['description'] + "</h4><h4><span>Image</span><br />" + nftMeta[i]['image'] +"</h4><h4><span>Issuer</span><br />" + nftMeta[i].properties['issuer'] + "</h4><h4><span>Supply Block Hash</span><br />" + nftMeta[i].properties['supply_block_hash'] +"</h4></div><div class='end'><h4 class='view-jsonraw' onClick='Showme(" + i + ")'><span>View</span><br />Raw Json</h4></div><div class='json-wrap' id='json" + i + "'><div>" + JSON.stringify(nftMeta[i]) + "</div></div></div>");
+      $("#data > .wrapper").append("<div class='metabox' data-subtype='nft'><div class='left-wrap'><div class='type nft'><span>SubType</span><h4>NFT Meta</h4></div><div class='card'><h4><span>Name</span><br />" + nftMeta[i]['name'] + "</h4></div></div><div class='info-wrap'><h4><span>description</span><br />" + nftMeta[i]['description'] + "</h4><h4><span>Image</span><br />" + nftMeta[i]['image'] +"</h4><h4><span>Issuer</span><br />" + nftMeta[i].properties['issuer'] + "</h4><h4><span>Supply Block Hash</span><br />" + nftMeta[i].properties['supply_block_hash'] +"</h4></div><div class='end'><h4 class='view-jsonraw' onClick='Showme(jsonnft" + i + ")'><span>View</span><br />Raw Json</h4></div><div class='json-wrap' id='jsonnft" + i + "'><div>" + JSON.stringify(nftMeta[i]) + "</div></div></div>");
     }
     var seen = {};
     $('#data > .wrapper > div').each(function() {
@@ -340,18 +340,6 @@ function buidPage(nftBlocks, nftMeta) {
         $('body').removeClass('load-data');
       }, 2000);
   }
-}
-
-function orderfunction() {
-  $(".metabox").each(function(){
-    //console.log($(this).attr("data-date"));
-    $('.metabox').sort(function (a, b) {
-      var jobA = parseInt( $(a).data('date'));
-      var jobB = parseInt( $(b).data('date'));
-      return (jobA > jobB) ? -1 : (jobA < jobB) ? 1 : 0;
-     }).appendTo("#data > .wrapper");
-  });
-  console.log("complete");
 }
 
 setTimeout(orderfunction, 1000);
