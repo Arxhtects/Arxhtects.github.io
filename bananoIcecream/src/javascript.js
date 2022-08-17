@@ -406,21 +406,21 @@ function loadingLoop(str) {
     }
   });
   
+  
+  $('.data-header > div > a.active').on("click", function() {
+    $('.data-header > div > a').removeClass('active');
+  });
+
   $('.data-header > div > a').on("click", function() {
     var value = $(this).attr('href');
     value = value.replace(/[^a-zA-Z0-9 ]/g, ''); //remove hashtag
     $('.data-header > div > a').removeClass('active');
-    if ($(this).hasClass("active")) {
-      console.log('help');
-      $('.data-header > div > a').removeClass('active');
-    } else {
-      $(this).addClass('active');
-    }
+    $(this).addClass('active');
     $(".metabox").addClass('hide');
     $('#data').find("[data-subtype='" + value + "']").removeClass('hide'); 
   });
 
-  $("view-jsonraw").on("click", function() {
+  $(".view-jsonraw").on("click", function() {
     $(this).parent().parent().find('.json-wrap').toggleClass('active');
   });
 
