@@ -408,6 +408,7 @@ function loadingLoop(str) {
   
   $('.data-header > div > a').on("click", function() {
     var value = $(this).attr('href');
+    value = value.replace(/[^a-zA-Z0-9 ]/g, '');
     $('.data-header > div > a').removeClass('active');
     if ($(this).hasClass("active")) {
       $(this).removeClass('active');
@@ -415,7 +416,7 @@ function loadingLoop(str) {
       $(this).addClass('active');
     }
     $(".metabox").addClass('hide');
-    $('.metabox').find("[data-subtype='" + value + "']").removeClass('hide'); 
+    $('#data').find("[data-subtype='" + value + "']").removeClass('hide'); 
   });
 
   $('#close').on('click', function() {
