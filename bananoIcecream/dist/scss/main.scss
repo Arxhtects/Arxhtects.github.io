@@ -1032,6 +1032,7 @@ footer {
     transition: $transition;
     div {
       padding: 20px;
+      width: calc(100% - 40px);
       .darkmode & {
         color: $darkmodefont;
       }
