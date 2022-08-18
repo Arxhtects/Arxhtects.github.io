@@ -868,7 +868,15 @@ footer {
     padding: 60px;
     width: calc(100% - 120px) !important;
     height: 100vh;
+    h4 {
+      font-size: 30px;
+      height: auto;
+      line-height: 1.2;
+      word-break: normal;
+    }
     p {
+      word-break: normal;
+      font-size: 20px;
       .darkmode & {
         color: $darkmodefont;
       }

@@ -340,7 +340,7 @@ function buidPage(nftBlocks, nftMeta) {
         $('body').removeClass('load-data');
       }, 2000);
   } else { 
-    $("#data > .wrapper").append("<div class='metabox error-box'><h4><span>Uh No!</span><br />It Would Appear You Have Sent Or recived Any NFTS in the last 500 Transactions, That is the limitation of the API, It will eventually be moved over to work with Airtunes RPC, But for now. Sorry. <i class='fa-light fa-face-anxious-sweat'></i></h4><p>It could also be an error! Sometimes the monkey gets lost in the block chain! Check the console and send a screen shot to archtects on discord</p></div>");
+    $("#data > .wrapper").append("<div class='metabox error-box'><h4><span>Uh No!</span><br />It Would Appear You Have Sent Or recived Any NFTS in the last 500 Transactions, That is the limitation of the API, It will eventually be moved over to work with Airtunes RPC, But for now. Sorry. <i class='fa-light fa-face-anxious-sweat'></i><p>It could also be an error! Sometimes the monkey gets lost in the block chain! Check the console and send a screen shot to archtects on discord</p></h4></div>");
     $('body').addClass('show-data');
     $('body').removeClass('loading');
     $("#data").addClass("show");
