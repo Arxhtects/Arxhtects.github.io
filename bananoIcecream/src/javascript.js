@@ -268,7 +268,7 @@ async function getNFTBlocksForAccount(account) {
       representative = sendBlock.contents['representative'];
       blockHeight = sendBlock['height'];
       cidJson = await validCIDaccount(representative);
-      //console.log(cidJson);
+      console.log(cidJson); //debug
       if(cidJson !== false) {
         let issuerAddress = cidJson['properties']['issuer'];
         
