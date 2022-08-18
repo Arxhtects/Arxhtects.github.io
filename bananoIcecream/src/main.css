@@ -692,6 +692,12 @@ footer {
     display: none; }
   .metabox div {
     margin-bottom: 0px !important; }
+  .metabox.error {
+    padding: 60px;
+    width: calc(100% - 120px) !important;
+    height: 100vh; }
+    .darkmode .metabox.error p {
+      color: #eef1f7; }
   .darkmode .metabox {
     background: #222932; }
   .metabox:after {

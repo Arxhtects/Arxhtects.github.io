@@ -864,6 +864,16 @@ footer {
   div {
     margin-bottom: 0px !important;
   }
+  &.error {
+    padding: 60px;
+    width: calc(100% - 120px) !important;
+    height: 100vh;
+    p {
+      .darkmode & {
+        color: $darkmodefont;
+      }
+    }
+  }
   display: flex;
   flex-flow: row wrap;
   width: 100% !important;
