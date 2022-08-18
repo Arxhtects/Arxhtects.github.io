@@ -447,7 +447,7 @@ function loadingLoop(str) {
       $('body').removeClass('z-index');
       $('body').removeClass("show-main");
       $('body').addClass('hidden');
-    }, 2000);
+    }, 2500);
     setTimeout(function tickthree() {
       $('body').removeClass('hidden');
     }, 3000);
