@@ -342,7 +342,6 @@ function buidPage(nftBlocks, nftMeta) {
   }
 }
 
-setTimeout(orderfunction, 1000);
 
 async function checkUrl() {
     let response;
