@@ -752,13 +752,22 @@ footer {
       .darkmode .metabox h4 span {
         color: #eef1f7; }
   .metabox .left-wrap {
-    width: calc(30% - 60px) !important;
+    width: calc(100% - 60px) !important;
     background: #e0e2e9;
-    padding: 30px;
-    border-radius: 26px 0px 0px 26px; }
+    padding: 30px; }
+    @media only screen and (min-width: 900px) {
+      .metabox .left-wrap {
+        width: calc(40% - 60px) !important;
+        border-radius: 26px 0px 0px 0px; } }
+    @media only screen and (min-width: 1130px) {
+      .metabox .left-wrap {
+        width: calc(30% - 60px) !important;
+        border-radius: 26px 0px 0px 26px; } }
     .darkmode .metabox .left-wrap {
       background: #1a1a1a; }
     .metabox .left-wrap .card {
+      max-width: 300px;
+      margin: 0 auto;
       padding: 30px;
       border-radius: 26px;
       display: flex;
@@ -768,8 +777,11 @@ footer {
       min-height: 150px;
       background: linear-gradient(to right top, #f591a1, #f87da1, #f869a6, #f454b0, #eb3fbe);
       width: calc(100% - 70px) !important;
-      box-shadow: 0px 0px 50px rgba(84, 84, 84, 0.39);
-      margin-top: 60px; }
+      box-shadow: 0px 0px 50px rgba(84, 84, 84, 0.39); }
+      @media only screen and (min-width: 900px) {
+        .metabox .left-wrap .card {
+          margin: 60px 0px 0px 0px;
+          max-width: 1000px; } }
       .darkmode .metabox .left-wrap .card {
         background: linear-gradient(to right top, #6c49fb, #9541f2, #b338e7, #cc2fdc, #e027d0);
         box-shadow: 0px 0px 50px rgba(255, 82, 170, 0.23); }
@@ -779,16 +791,25 @@ footer {
         font-size: 30px;
         line-height: 1; }
   .metabox .info-wrap {
-    width: calc(55% - 60px) !important;
+    width: calc(100% - 60px) !important;
     padding: 30px; }
+    @media only screen and (min-width: 900px) {
+      .metabox .info-wrap {
+        width: calc(60% - 60px) !important; } }
+    @media only screen and (min-width: 1130px) {
+      .metabox .info-wrap {
+        width: calc(55% - 60px) !important; } }
   .metabox .end {
-    width: calc(15% - 30px) !important;
+    width: calc(100% - 30px) !important;
     display: flex;
     justify-content: end;
     flex-flow: column;
     padding-right: 30px;
     padding-bottom: 30px;
     align-items: end; }
+    @media only screen and (min-width: 1130px) {
+      .metabox .end {
+        width: calc(15% - 30px) !important; } }
     .metabox .end h4 {
       cursor: pointer;
       position: relative;
