@@ -285,6 +285,19 @@ async function getNFTBlocksForAccount(account) {
         //push cidJson to buildpage
         //sendBlocksLinked
         //document.body.innerHTML += JSON.stringify(cidJson, null, 4); //remove after testing
+      } else { 
+        $("#data > .wrapper").append("<div class='metabox'><h4><span>Sorry <i class='fa-light fa-face-anxious-sweat'></i></span><br />It Would Appear You Have No NFTS in the last 500 Transactions.<h4></div>");
+        $('body').addClass('show-data');
+        $('body').removeClass('loading');
+        $("#data").addClass("show");
+        $(".outer").addClass("hide");
+        clearTimeout(loopTimer);
+        let timerId = setTimeout(function tick() {
+            $('body').removeClass('z-index');
+            $('body').removeClass("show-data");
+            $('body').removeClass('load-data');
+          }, 2000);
+        }
       }
     }
   }
