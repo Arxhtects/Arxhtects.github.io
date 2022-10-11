@@ -3,7 +3,7 @@ import * as WalletconnectUtils from "https://cdn.skypack.dev/@walletconnect/util
 
 import TokenInfo from "./token_info.js"
 
-const web3 = new Web3(window.ethereum);
+//const web3 = new Web3(window.ethereum);
 
 
     async function getDetails() {
