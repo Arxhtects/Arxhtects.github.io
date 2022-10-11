@@ -1,11 +1,9 @@
 import * as web3 from "https://cdn.skypack.dev/web3@1.8.0";
 import * as WalletconnectUtils from "https://cdn.skypack.dev/@walletconnect/utils@1.8.0";
 
-var Web3 = require('web3');
-
 import TokenInfo from "./token_info.js"
 
-//const web3 = new Web3(window.ethereum);
+const Web3 = new web3(window.ethereum);
 
 
     async function getDetails() {
