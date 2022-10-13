@@ -11,10 +11,9 @@ const web3 = new Web3(window.ethereum);
         // console.log(lucidBalance);
         // for(let index = 0; index < lucidBalance; index++) {
 
-        for(let i = 1; i < 5; i++) {
+        for(let i = 0; i < 5; i++) {
             const matchaddress = await contract.methods.ownerOf(i).call();
-            const addresses = await fetch(matchaddress).then((response) => response.json);
-            console.log(addresses);
+            console.log(matchaddress);
         }
 
         // for(let index = 0; index < lucidBalance; index++) {
