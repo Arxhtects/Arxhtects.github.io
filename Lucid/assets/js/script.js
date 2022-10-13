@@ -10,10 +10,6 @@
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
 
-        for(let i = 1; i < 10; i++) {
-            const matchaddress = await contract.methods.ownerOf(i).call();
-            console.log(matchaddress);
-        }
 
         // for(let index = 0; index < lucidBalance; index++) {
         //     const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index).call();
@@ -27,7 +23,17 @@
         //     console.log(tokenMeta);
         // }
     }
-
+    async function refreshData() { 
+    const metaDataAddress = [];
+        for(let i = 1; i < 10; i++) {
+            const matchaddress = await contract.methods.ownerOf(i).call();
+            metaDataAddress.push({
+                token_id : i,
+                address: matchaddress
+            });
+            console.log(JSON.stringify(metaDataAddress));
+        }
+    }
     $("#button").on("click", function() {
-        getDetails();
+        refreshData();
     });
