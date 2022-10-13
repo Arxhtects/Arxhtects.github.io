@@ -9,7 +9,7 @@ const web3 = new Web3(window.ethereum);
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
         // console.log(lucidBalance);
-        $.each(lucidBalance, function(index, val) {
+        for(let index = 0; index < lucidBalance; index++) {
             const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index);
             
             let tokenUri = await contract.methods.tokenURI(tokenId).call();
@@ -19,7 +19,7 @@ const web3 = new Web3(window.ethereum);
 
             const tokenMeta = await fetch(tokenUri).then((response) => response.json);
             console.log(tokenMeta);
-        });
+        }
     }
 
     $("#button").on("click", function() {
