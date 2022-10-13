@@ -10,7 +10,7 @@
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
 
-        for(let i = 1; i < 500; i++) {
+        for(let i = 1; i < 10; i++) {
             const matchaddress = await contract.methods.ownerOf(i).call();
             console.log(matchaddress);
         }
