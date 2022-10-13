@@ -11,10 +11,23 @@ const web3 = new Web3(window.ethereum);
         // console.log(lucidBalance);
         // for(let index = 0; index < lucidBalance; index++) {
 
-        // }
         for(let i = 0; i < 5; i++) {
-            const matchaddress = await contract.methods.ownerOf(i);
+            const matchaddress = await contract.methods.ownerOf(i).call();
+            const addresses = await fetch(matchaddress).then((response) => response.json);
+            console.log(addresses);
         }
+
+        // for(let index = 0; index < lucidBalance; index++) {
+        //     const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index).call();
+            
+        //     let tokenUri = await contract.methods.tokenURI(tokenId).call();
+        //     if(tokenUri.startsWith("ipfs://")) {
+        //         tokenUri = 'https://ipfs.io/ipfs/' + tokenUri.split("ipfs://")[1];
+        //     }
+
+        //     const tokenMeta = await fetch(tokenUri).then((response) => response.json);
+        //     console.log(tokenMeta);
+        // }
     }
 
     $("#button").on("click", function() {
