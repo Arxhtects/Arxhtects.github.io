@@ -9,16 +9,11 @@ const web3 = new Web3(window.ethereum);
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
         // console.log(lucidBalance);
-        for(let index = 0; index < lucidBalance; index++) {
-            const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index).call();
-            
-            let tokenUri = await contract.methods.tokenURI(tokenId).call();
-            if(tokenUri.startsWith("ipfs://")) {
-                tokenUri = 'https://ipfs.io/ipfs/' + tokenUri.split("ipfs://")[1];
-            }
+        // for(let index = 0; index < lucidBalance; index++) {
 
-            const tokenMeta = await fetch(tokenUri).then((response) => response.json);
-            console.log(tokenMeta);
+        // }
+        for(let i = 0; i < 5; i++) {
+            const matchaddress = await contract.methods.ownerOf(i);
         }
     }
 
