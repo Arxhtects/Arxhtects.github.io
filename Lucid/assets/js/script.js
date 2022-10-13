@@ -10,7 +10,7 @@ const web3 = new Web3(window.ethereum);
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
         // console.log(lucidBalance);
         for(let index = 0; index < lucidBalance; index++) {
-            const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index);
+            const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index).call();
             
             let tokenUri = await contract.methods.tokenURI(tokenId).call();
             if(tokenUri.startsWith("ipfs://")) {
