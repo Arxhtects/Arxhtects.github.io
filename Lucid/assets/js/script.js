@@ -6,9 +6,16 @@
     const contract = new web3.eth.Contract(TokenInfo, "0x34Bc797F40Df0445c8429d485232874B15561728");
     let req = new XMLHttpRequest();
 
-    async function getDetails() {
+    async function getDetails(items) {
 
+        const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
+        contract.defaultAccounts = walletAddress;
+        const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
+        //console.log(lucidBalance);
 
+        for(let index = 0; index <= lucidBalance; index++) {
+            console.log(items[i]);
+        }
         // for(let index = 0; index < lucidBalance; index++) {
         //     const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index).call();
             
@@ -24,17 +31,14 @@
 
     async function getList() {
         
-        const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
-        contract.defaultAccounts = walletAddress;
-        const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
-        console.log(lucidBalance);
 
         req.onreadystatechange = () => {
             if (req.readyState == XMLHttpRequest.DONE) {
                 const jsonList = JSON.parse(req.responseText);
                 const recordsList = jsonList['record'];
                 const filterdList = recordsList.filter(element => element.address == walletAddress);
-                console.log(filterdList);
+                //console.log(filterdList);
+                getDetails(filterdList)
             }
         };
           
@@ -42,9 +46,6 @@
         req.setRequestHeader("X-Master-Key", "$2b$10$M4HutcgG6nfvlpHWX6xEAuxZudTwmi3Di2FY69t6Xk6gwt0aEZy9O");
         req.send();
 
-        for(let index = 0; index <= lucidBalance; index++) {
-            console.log("done " + index);
-        }
     }    
 
     async function refreshData() { 
