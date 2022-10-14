@@ -16,7 +16,7 @@
             const tokenMeta = await fetch(tokenUri).then((response) => response.json());
             var tokenImage = tokenMeta.image;
             tokenImage = tokenImage.replace("ipfs://", "");
-            $("#nftwrap").append('<div class="json"><img src="https://ipfs.io/ipfs/' + tokenImage + '">' + JSON.stringify(tokenMeta) + '</div>');
+            $("#nftwrap").append('<div class="json"><img src="https://ipfs.io/ipfs/' + tokenImage + '?auto=format&w=500">' + JSON.stringify(tokenMeta) + '</div>');
         }
     }
 
