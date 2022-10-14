@@ -12,7 +12,7 @@
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
         //console.log(lucidBalance);
 
-        for(let index = 0; index <= lucidBalance; index++) {
+        for(let i = 0; i <= lucidBalance; i++) {
             console.log(items[i]);
         }
         // for(let index = 0; index < lucidBalance; index++) {
@@ -70,6 +70,7 @@
     }
 
     $("#getNFTsFromAddress").on("click", function() {
+        //TODO pass address via here
         getList();
     });
 
