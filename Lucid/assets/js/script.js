@@ -13,7 +13,9 @@
         //console.log(lucidBalance);
 
         for(let i = 0; i <= lucidBalance; i++) {
-            console.log(items[i]);
+            let tokenUri = baselineURI + items[i];
+            const tokenMeta = await fetch(tokenUri).then((response) => response.json);
+            console.log(tokenMeta);
         }
         // for(let index = 0; index < lucidBalance; index++) {
         //     const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index).call();
