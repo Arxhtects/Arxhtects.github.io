@@ -7,9 +7,6 @@
     let req = new XMLHttpRequest();
 
     async function getDetails() {
-        const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
-        contract.defaultAccounts = walletAddress;
-        const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
 
 
         // for(let index = 0; index < lucidBalance; index++) {
@@ -26,15 +23,24 @@
     }
 
     async function getList() {
+        
+        const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
+        contract.defaultAccounts = walletAddress;
+        const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
+
         req.onreadystatechange = () => {
             if (req.readyState == XMLHttpRequest.DONE) {
-              console.log(req.responseText);
+              console.log(req.responseText.record);
             }
-          };
+        };
           
-          req.open("GET", "https://api.jsonbin.io/v3/b/6349682b0e6a79321e285678/latest", true);
-          req.setRequestHeader("X-Master-Key", "$2b$10$M4HutcgG6nfvlpHWX6xEAuxZudTwmi3Di2FY69t6Xk6gwt0aEZy9O");
-          req.send();
+        req.open("GET", "https://api.jsonbin.io/v3/b/6349682b0e6a79321e285678/latest", true);
+        req.setRequestHeader("X-Master-Key", "$2b$10$M4HutcgG6nfvlpHWX6xEAuxZudTwmi3Di2FY69t6Xk6gwt0aEZy9O");
+        req.send();
+
+        for(let index = 0; index < lucidBalance; index++) {
+            
+        }
     }    
 
     async function refreshData() { 
