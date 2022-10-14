@@ -30,7 +30,8 @@
 
         req.onreadystatechange = () => {
             if (req.readyState == XMLHttpRequest.DONE) {
-              console.log(req.responseText.record);
+                const jsonList = req.responseText;
+                console.log(jsonList[1]);
             }
         };
           
@@ -39,7 +40,7 @@
         req.send();
 
         for(let index = 0; index < lucidBalance; index++) {
-            
+
         }
     }    
 
