@@ -15,9 +15,9 @@
             let tokenUri = baselineURI + items[i].token_id;
             const tokenMeta = await fetch(tokenUri).then((response) => response.json());
             const tokenImage = tokenMeta.image;
-            // if(tokenImage.startsWith("ipfs://")) {
-            //     tokenImage = "https://ipfs.io/ipfs/${tokenImage.split('ipfs://')[1]}";
-            // }
+            if(tokenImage.startsWith("ipfs://")) {
+                tokenImage = "https://ipfs.io/ipfs/${tokenImage.split('ipfs://')[1]}";
+            }
             $("#nftwrap").append('<div class="json"><img src="' + tokenImage + '">' + JSON.stringify(tokenMeta) + '</div>');
         }
     }
