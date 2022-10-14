@@ -10,24 +10,12 @@
         const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
-        //console.log(lucidBalance);
 
         for(let i = 0; i <= lucidBalance; i++) {
             let tokenUri = baselineURI + items[i].token_id;
-            const tokenMeta = await fetch(tokenUri).then((response) => response.json);
+            const tokenMeta = await fetch(tokenUri).then((response) => response.json());
             console.log(tokenMeta);
         }
-        // for(let index = 0; index < lucidBalance; index++) {
-        //     const tokenId = await contract.methods.tokenOfOwnerByIndex(walletAddress, index).call();
-            
-        //     let tokenUri = await contract.methods.tokenURI(tokenId).call();
-        //     if(tokenUri.startsWith("ipfs://")) {
-        //         tokenUri = 'https://ipfs.io/ipfs/' + tokenUri.split("ipfs://")[1];
-        //     }
-
-        //     const tokenMeta = await fetch(tokenUri).then((response) => response.json);
-        //     console.log(tokenMeta);
-        // }
     }
 
     async function getList() {
