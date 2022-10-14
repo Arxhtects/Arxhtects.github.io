@@ -27,11 +27,14 @@
         const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
+        console.log(lucidBalance);
 
         req.onreadystatechange = () => {
             if (req.readyState == XMLHttpRequest.DONE) {
                 const jsonList = JSON.parse(req.responseText);
-                console.log(jsonList['record']);
+                const recordsList = jsonList['record'];
+                const filterdList = recordsList.filter(element => element.address == walletAddress);
+                console.log(filterdList);
             }
         };
           
@@ -39,14 +42,14 @@
         req.setRequestHeader("X-Master-Key", "$2b$10$M4HutcgG6nfvlpHWX6xEAuxZudTwmi3Di2FY69t6Xk6gwt0aEZy9O");
         req.send();
 
-        for(let index = 0; index < lucidBalance; index++) {
-
+        for(let index = 0; index <= lucidBalance; index++) {
+            console.log("done " + index);
         }
     }    
 
     async function refreshData() { 
     const metaDataAddress = [];
-        for(let i = 1; i <= 5555; i++) {
+        for(let i = 1; i <= 50; i++) {
             const matchaddress = await contract.methods.ownerOf(i).call();
             metaDataAddress.push({
                 token_id : i,
