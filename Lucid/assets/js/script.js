@@ -42,7 +42,7 @@
             req.open("PUT", "https://api.jsonbin.io/v3/b/6349682b0e6a79321e285678", true);
             req.setRequestHeader("Content-Type", "application/json");
             req.setRequestHeader("X-Master-Key", "$2b$10$M4HutcgG6nfvlpHWX6xEAuxZudTwmi3Di2FY69t6Xk6gwt0aEZy9O");
-            req.send('{"sample": "Hello World"}');
+            req.send(metaDataAddress);
         }
     }
     $("#button").on("click", function() {
