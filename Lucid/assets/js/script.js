@@ -49,7 +49,7 @@
 
     async function refreshData() { 
     const metaDataAddress = [];
-        for(let i = 1; i <= 50; i++) {
+        for(let i = 1; i <= 5555; i++) {
             const matchaddress = await contract.methods.ownerOf(i).call();
             metaDataAddress.push({
                 token_id : i,
