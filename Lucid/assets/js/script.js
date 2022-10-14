@@ -18,7 +18,7 @@
             if(tokenImage.startsWith("ipfs://")) {
                 tokenImage = "https://ipfs.io/ipfs/" + tokenImage.split('ipfs://')[1];
             }
-            $("#nftwrap").append('<div class="json"><img src="' + tokenImage '">' + JSON.stringify(tokenMeta) + '</div>');
+            $("#nftwrap").append('<div class="json"><img src="' + tokenImage + '">' + JSON.stringify(tokenMeta) + '</div>');
         }
     }
 
