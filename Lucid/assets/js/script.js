@@ -7,7 +7,6 @@
     let req = new XMLHttpRequest();
 
     async function getDetails(items) {
-
         const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
@@ -30,7 +29,7 @@
     }
 
     async function getList() {
-        
+        const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
 
         req.onreadystatechange = () => {
             if (req.readyState == XMLHttpRequest.DONE) {
