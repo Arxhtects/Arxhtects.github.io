@@ -6,20 +6,20 @@
     const contract = new web3.eth.Contract(TokenInfo, "0x34Bc797F40Df0445c8429d485232874B15561728");
     let req = new XMLHttpRequest();
 
-    async function getDetails(items) {
-        const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
+    async function getDetails(items, address) {
+        const walletAddress = address; //TODO Connect and get (ReadONLY)
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
 
         for(let i = 0; i <= lucidBalance; i++) {
             let tokenUri = baselineURI + items[i].token_id;
             const tokenMeta = await fetch(tokenUri).then((response) => response.json());
-            console.log(tokenMeta);
+            $("#nftwrap").append('<div class="json">' + JSON.stringify(tokenMeta) + '</div>')
         }
     }
 
-    async function getList() {
-        const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
+    async function getList(address) {
+        const walletAddress = address; //TODO Connect and get (ReadONLY)
 
         req.onreadystatechange = () => {
             if (req.readyState == XMLHttpRequest.DONE) {
@@ -27,7 +27,7 @@
                 const recordsList = jsonList['record'];
                 const filterdList = recordsList.filter(element => element.address == walletAddress);
                 //console.log(filterdList);
-                getDetails(filterdList)
+                getDetails(filterdList, address)
             }
         };
           
@@ -60,8 +60,12 @@
     }
 
     $("#getNFTsFromAddress").on("click", function() {
-        //TODO pass address via here
-        getList();
+        var searchAddress = $("#address").val();
+        if(searchAddress == null || searchAddress == "") {
+            //do errors and stuff
+        } else {
+            getList(searchAddress);
+        }
     });
 
     $("#getAddressList").on("click", function() {

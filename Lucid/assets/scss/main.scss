@@ -19,3 +19,13 @@
     color: white;
     cursor: pointer;
 }
+
+#nftwrap {
+    padding: 20px;
+    margin-top: 20px;
+    .json {
+        background: whitesmoke;
+        padding: 10px;
+        border-bottom: green solid 2px;
+    }
+}
