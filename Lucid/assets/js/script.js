@@ -13,7 +13,7 @@
         //console.log(lucidBalance);
 
         for(let i = 0; i <= lucidBalance; i++) {
-            let tokenUri = baselineURI + items[i];
+            let tokenUri = baselineURI + items[i].token_id;
             const tokenMeta = await fetch(tokenUri).then((response) => response.json);
             console.log(tokenMeta);
         }
