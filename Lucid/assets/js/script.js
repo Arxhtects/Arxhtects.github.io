@@ -26,7 +26,7 @@
     }
     async function refreshData() { 
     const metaDataAddress = [];
-        for(let i = 1; i < 10; i++) {
+        for(let i = 1; i <= 2; i++) {
             const matchaddress = await contract.methods.ownerOf(i).call();
             metaDataAddress.push({
                 token_id : i,
@@ -42,7 +42,7 @@
             req.open("PUT", "https://api.jsonbin.io/v3/b/6349682b0e6a79321e285678", true);
             req.setRequestHeader("Content-Type", "application/json");
             req.setRequestHeader("X-Master-Key", "$2b$10$M4HutcgG6nfvlpHWX6xEAuxZudTwmi3Di2FY69t6Xk6gwt0aEZy9O");
-            req.send(metaDataAddress);
+            req.send(JSON.stringify(metaDataAddress));
         }
     }
     $("#button").on("click", function() {
