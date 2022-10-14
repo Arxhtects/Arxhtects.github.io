@@ -4,6 +4,7 @@
 
     let baselineURI = "https://ipfs.io/ipfs/bafybeibcfgitbgkmyxmmanvbcfn5tgn4nn2j7ouhhzvc6cib7vsp6tnaci/"
     const contract = new web3.eth.Contract(TokenInfo, "0x34Bc797F40Df0445c8429d485232874B15561728");
+    let req = new XMLHttpRequest();
 
     async function getDetails() {
         const walletAddress = "0xa3C121b60C4219274EB6a0e2AfA539336ad7E35D"; //TODO Connect and get (ReadONLY)
@@ -31,7 +32,17 @@
                 token_id : i,
                 address: matchaddress
             });
-            console.log(JSON.stringify(metaDataAddress));
+            // console.log(JSON.stringify(metaDataAddress));
+            req.onreadystatechange = () => {
+                if (req.readyState == XMLHttpRequest.DONE) {
+                    console.log(req.responseText);
+                }
+            };
+            
+            req.open("PUT", "https://api.jsonbin.io/v3/b/6349682b0e6a79321e285678", true);
+            req.setRequestHeader("Content-Type", "application/json");
+            req.setRequestHeader("X-Master-Key", "$2b$10$M4HutcgG6nfvlpHWX6xEAuxZudTwmi3Di2FY69t6Xk6gwt0aEZy9O");
+            req.send('{"sample": "Hello World"}');
         }
     }
     $("#button").on("click", function() {
