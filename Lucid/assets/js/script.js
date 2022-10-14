@@ -14,7 +14,7 @@
         for(let i = 0; i <= lucidBalance; i++) {
             let tokenUri = baselineURI + items[i].token_id;
             const tokenMeta = await fetch(tokenUri).then((response) => response.json());
-            const tokenImage = tokenMeta.image;
+            var tokenImage = tokenMeta.image;
             tokenImage = tokenImage.replace("ipfs://", "");
             $("#nftwrap").append('<div class="json"><img src="https://ipfs.io/ipfs/' + tokenImage + '">' + JSON.stringify(tokenMeta) + '</div>');
         }
