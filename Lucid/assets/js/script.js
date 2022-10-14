@@ -7,7 +7,7 @@
     let req = new XMLHttpRequest();
 
     async function getDetails() {
-        const walletAddress = "0xa3C121b60C4219274EB6a0e2AfA539336ad7E35D"; //TODO Connect and get (ReadONLY)
+        const walletAddress = "0x9935a4D7603D26694fcE0E0D9b2fd7d343B56032"; //TODO Connect and get (ReadONLY)
         contract.defaultAccounts = walletAddress;
         const lucidBalance = await contract.methods.balanceOf(walletAddress).call();
 
@@ -24,9 +24,22 @@
         //     console.log(tokenMeta);
         // }
     }
+
+    async function getList() {
+        req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+              console.log(req.responseText);
+            }
+          };
+          
+          req.open("GET", "https://api.jsonbin.io/v3/b/6349682b0e6a79321e285678/latest", true);
+          req.setRequestHeader("X-Master-Key", "$2b$10$M4HutcgG6nfvlpHWX6xEAuxZudTwmi3Di2FY69t6Xk6gwt0aEZy9O");
+          req.send();
+    }    
+
     async function refreshData() { 
     const metaDataAddress = [];
-        for(let i = 1; i <= 2; i++) {
+        for(let i = 1; i <= 5555; i++) {
             const matchaddress = await contract.methods.ownerOf(i).call();
             metaDataAddress.push({
                 token_id : i,
@@ -45,6 +58,11 @@
             req.send(JSON.stringify(metaDataAddress));
         }
     }
-    $("#button").on("click", function() {
+
+    $("#getNFTsFromAddress").on("click", function() {
+        getList();
+    });
+
+    $("#getAddressList").on("click", function() {
         refreshData();
     });
