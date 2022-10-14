@@ -30,8 +30,8 @@
 
         req.onreadystatechange = () => {
             if (req.readyState == XMLHttpRequest.DONE) {
-                const jsonList = req.responseText;
-                console.log(jsonList);
+                const jsonList = JSON.parse(req.responseText);
+                console.log(jsonList['record']);
             }
         };
           
