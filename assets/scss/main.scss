@@ -71,9 +71,11 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    background: $backgroundColor;
     .logo {
-        height: 30px;
+        background: $backgroundColor;
+        height: 70px;    
+        padding: 20px;
+        border-radius: 8px;
     }
     ul {
         list-style: none;

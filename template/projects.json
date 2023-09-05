@@ -19,6 +19,24 @@
                     "Github" : ""
                 }
             ]
+        },
+        {
+            "projecttitle" : "N073_5",
+            "hashtags" : [
+                "java",
+                "android",
+                "google play",
+                "android studio"
+            ],
+            "color" : "#80919C",
+            "image" : "terminalnotetaker.webp",
+            "shortdescription" : "",
+            "link" : [
+                {
+                    "Article" : "https://android.gadgethacks.com/how-to/take-notes-terminal-interface-with-linux-style-app-0182127/",
+                    "Google Play" : "https://play.google.com/store/apps/details?id=archtectsproductions.terminalnotesFree&pli=1"
+                }
+            ]
         }
     ]
 }

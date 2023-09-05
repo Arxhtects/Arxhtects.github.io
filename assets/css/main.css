@@ -54,10 +54,12 @@ header {
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  top: 0;
-  background: #E2E3E5; }
+  top: 0; }
   header .logo {
-    height: 30px; }
+    background: #E2E3E5;
+    height: 70px;
+    padding: 20px;
+    border-radius: 8px; }
   header ul {
     list-style: none;
     display: flex;
