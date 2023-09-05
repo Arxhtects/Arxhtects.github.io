@@ -4,9 +4,7 @@ $(document).ready(function() {
     $.getJSON( "template/projects.json", function( data ) {
         var items = [];
         $.each( data, function( key, val ) {
-            $.each( key, function( key, val ) {
-                items.push( "<li id='" + key + "'>" + val + "</li>" );
-            });
+          items.push( "<li id='" + key.project_title + "'>" + val.project_title + "</li>" );
         });
        
         $( "<ul/>", {
