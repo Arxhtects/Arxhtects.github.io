@@ -110,12 +110,13 @@ section {
 
 #template-target {
   display: flex;
-  flex-flow: row; }
+  flex-flow: row wrap; }
   @media only screen and (min-width: 743px) {
     #template-target {
-      justify-content: centre;
-      gap: 20px; } }
+      justify-content: center;
+      gap: 40px; } }
   #template-target .projects {
+    cursor: pointer;
     width: 100%; }
     @media only screen and (min-width: 743px) {
       #template-target .projects {
@@ -125,6 +126,9 @@ section {
     #template-target .projects h3 {
       font-size: 3.5rem;
       line-height: 1; }
+    #template-target .projects p {
+      line-height: 1.43;
+      font-style: 0.8rem; }
     #template-target .projects ul {
       list-style: none;
       display: flex;

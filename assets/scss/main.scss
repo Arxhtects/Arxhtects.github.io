@@ -135,12 +135,13 @@ section {
 
 #template-target {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     @media only screen and (min-width: 743px) {
-        justify-content: centre;
-        gap: 20px;
+        justify-content: center;
+        gap: 40px;
     }
     .projects {
+        cursor: pointer;
         width: 100%;
         @media only screen and (min-width: 743px) {
             width: calc((100% / 2) - 40px);
@@ -153,6 +154,10 @@ section {
         h3 {
             font-size: 3.5rem;
             line-height: 1;
+        }
+        p {
+            line-height: 1.43;
+            font-style: 0.8rem;
         }
         ul {
             list-style: none;

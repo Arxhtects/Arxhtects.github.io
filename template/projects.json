@@ -11,7 +11,7 @@
             ],
             "color" : "#ECD959",
             "image" : "bantip.webp",
-            "shortdescription" : "",
+            "shortdescription" : "An open source project, adding tip functionality to the banano sub reddit",
             "link" : [
                 {
                     "Firefox" : "",
@@ -30,7 +30,7 @@
             ],
             "color" : "#80919C",
             "image" : "terminalnotetaker.webp",
-            "shortdescription" : "",
+            "shortdescription" : "A lightweight, Note taking app designed to look like vim/cli based text editors",
             "link" : [
                 {
                     "Article" : "https://android.gadgethacks.com/how-to/take-notes-terminal-interface-with-linux-style-app-0182127/",
