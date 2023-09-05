@@ -123,11 +123,23 @@ section {
 #template-target {
     display: flex;
     flex-flow: row;
+    @media only screen and (min-width: 743px) {
+        justify-content: centre;
+        gap: 20px;
+    }
     .projects {
+        background: white;
         width: 100%;
         @media only screen and (min-width: 743px) {
-            width: calc((100% / 2) 40px);
+            width: calc((100% / 2) - 40px);
         }
+      figure {
+          border-radius: 8px;
+          overflow: hidden;
+            img {
+                width: 100%;
+            }
+      }
     }
 }
 
