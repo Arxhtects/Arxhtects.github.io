@@ -96,6 +96,15 @@ section {
   margin: 0 auto;
   padding: 40px; }
 
+#template-target {
+  display: flex;
+  flex-flow: row; }
+  #template-target .projects {
+    width: 100%; }
+    @media only screen and (min-width: 743px) {
+      #template-target .projects {
+        width: calc((100% / 2) 40px); } }
+
 footer {
   background-image: url(../img/hassaan-hereunsplashfooterBG.webp);
   min-height: 660px;
