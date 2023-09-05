@@ -132,12 +132,43 @@ section {
         width: 100%;
         @media only screen and (min-width: 743px) {
             width: calc((100% / 2) - 40px);
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
         }
-      figure {
+        h3 {
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            flex-flow: row wrap;
+            li {
+                padding: 5px 15px;
+                background: #ededed;
+                border: solid 1px #d2d2d2;
+                border-radius: 50px;
+                font-size: 0.8rem;
+                &:before {
+                    content: '#';
+                }
+            }
+        }
+      figure {    
+          margin: 0;
           border-radius: 8px;
           overflow: hidden;
             img {
                 width: 100%;
+                display: block;
+                @media only screen and (min-width: 743px) {
+                    transition: $transition;
+                    transform: scale(1);
+                }
             }
       }
     }
