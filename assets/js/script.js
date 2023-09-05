@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    console.log("updated 1");
+    
     $.getJSON( "template/projects.json", function( data ) {
         var items = ["projects"];
         $.each( data, function( key, val ) {
