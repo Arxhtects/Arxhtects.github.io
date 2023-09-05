@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.getJSON( "template/projects.json", function( data ) {
-        var items = [];
+        var items = ["projects"];
         $.each( data, function( key, val ) {
           items.push( "<li id='" + key + "'>" + val + "</li>" );
         });
