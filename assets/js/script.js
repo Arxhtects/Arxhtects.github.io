@@ -11,7 +11,7 @@ $(document).ready(function() {
               items.push( "<li id='" + key + "'>" + val + "</li>" );
             });
           items.push("</ul>");
-          items.push("<figure><img src='https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/project-banner/"+ val.image +"''></figure>");
+          items.push("<figure style='background: " + val.color + "'><img src='https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/project-banner/"+ val.image +"''></figure>");
           items.push("</div>");
         });
        
