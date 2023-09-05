@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0px; }
+
+html, body {
+  padding: 0px;
+  margin: 0 auto;
+  font-family: "Manrope", sans-serif;
+  background: #E2E3E5; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 30px; }
+
+p {
+  font-style: 1rem; }
+
+a {
+  color: #000000; }
+
+h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 3rem; }
+  @media only screen and (min-width: 743px) {
+    h1 {
+      font-size: 4.2rem; } }
+
+h2 {
+  font-size: 1.9rem; }
+  @media only screen and (min-width: 743px) {
+    h2 {
+      font-size: 2.6rem; } }
+
+.name {
+  font-weight: bold;
+  font-style: italic;
+  font-family: "EB Garamond", serif;
+  margin-bottom: 0px;
+  font-size: 1rem; }
+  @media only screen and (min-width: 743px) {
+    .name {
+      font-size: 1.4rem; } }
+
+.sub-title {
+  color: #a5a5a5; }
+
+header {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0; }
+  header .logo {
+    height: 30px; }
+  header ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column; }
+    @media only screen and (min-width: 743px) {
+      header ul {
+        flex-flow: row; } }
+    header ul li {
+      font-family: "EB Garamond", serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      cursor: pointer; }
+      @media only screen and (min-width: 743px) {
+        header ul li {
+          padding: 0px 20px;
+          transition: all 0.32s ease-in-out;
+          position: relative;
+          top: 0; }
+          header ul li:after {
+            content: '';
+            transition: all 0.32s ease-in-out;
+            right: 0;
+            width: 0%;
+            height: 2px;
+            background: #000000;
+            position: absolute;
+            bottom: -10px; }
+          header ul li:hover, header ul li.active {
+            top: -5px; }
+            header ul li:hover:after, header ul li.active:after {
+              left: 0;
+              right: auto;
+              width: 100%; } }
+
+section {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 40px; }
+
+footer {
+  background-image: url(../img/hassaan-hereunsplashfooterBG.webp);
+  min-height: 660px;
+  padding-bottom: 40px;
+  position: relative;
+  background-position-y: -100px;
+  background-size: cover; }
+  footer .footer-end {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0px;
+    padding: 10px 40px;
+    left: 0; }
+
+/*# sourceMappingURL=main.css.map */
