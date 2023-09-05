@@ -1,10 +1,12 @@
 $(document).ready(function() {
-    console.log("updated 1");
+    console.log("updated 2");
     
     $.getJSON( "template/projects.json", function( data ) {
-        var items = ["projects"];
+        var items = [];
         $.each( data, function( key, val ) {
-          items.push( "<li id='" + key + "'>" + val + "</li>" );
+            $.each( key, function( key, val ) {
+                items.push( "<li id='" + key + "'>" + val + "</li>" );
+            });
         });
        
         $( "<ul/>", {
