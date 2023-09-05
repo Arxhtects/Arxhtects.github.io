@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log("updated 7");
+    console.log("updated 9");
     
     $.getJSON( "https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/projects.json", function( data ) {
         var items = [];
@@ -15,6 +15,6 @@ $(document).ready(function() {
           items.push("</div>");
         });
        
-        $(items.join("")).appendTo( "body" );
+        $(items.join("")).appendTo("#template-target");
       });
 });
