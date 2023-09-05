@@ -54,7 +54,8 @@ header {
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  top: 0; }
+  top: 0;
+  background: #E2E3E5; }
   header .logo {
     height: 30px; }
   header ul {
@@ -113,13 +114,12 @@ section {
       justify-content: centre;
       gap: 20px; } }
   #template-target .projects {
-    background: white;
     width: 100%; }
     @media only screen and (min-width: 743px) {
       #template-target .projects {
         width: calc((100% / 2) - 40px); }
         #template-target .projects:hover img {
-          transform: scale(1.05); } }
+          transform: scale(1.132); } }
     #template-target .projects h3 {
       font-size: 3.5rem;
       line-height: 1; }

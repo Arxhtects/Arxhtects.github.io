@@ -71,6 +71,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
+    background: $backgroundColor;
     .logo {
         height: 30px;
     }
@@ -138,13 +139,12 @@ section {
         gap: 20px;
     }
     .projects {
-        background: white;
         width: 100%;
         @media only screen and (min-width: 743px) {
             width: calc((100% / 2) - 40px);
             &:hover {
                 img {
-                    transform: scale(1.05);
+                    transform: scale(1.132);
                 }
             }
         }
