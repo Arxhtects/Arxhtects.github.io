@@ -14,9 +14,9 @@
             "shortdescription" : "An open source project, adding tip functionality to the banano sub reddit",
             "link" : [
                 {
-                    "Firefox" : "",
-                    "Chrome" : "", 
-                    "Github" : ""
+                    "Firefox" : "https://addons.mozilla.org/en-GB/firefox/addon/bantip-tip-banano-on-reddit/",
+                    "Chrome" : "https://chrome.google.com/webstore/detail/bantip/kcbnafimhapdbckikobaacfmonlbikbn?hl=en-GB", 
+                    "Github" : "https://github.com/Arxhtects/BanTip"
                 }
             ]
         },
@@ -34,7 +34,8 @@
             "link" : [
                 {
                     "Article" : "https://android.gadgethacks.com/how-to/take-notes-terminal-interface-with-linux-style-app-0182127/",
-                    "Google Play" : "https://play.google.com/store/apps/details?id=archtectsproductions.terminalnotesFree&pli=1"
+                    "Google Play" : "https://play.google.com/store/apps/details?id=archtectsproductions.terminalnotesFree&pli=1",
+                    "Github" : "https://github.com/Arxhtects/Fake-Android-Terminal"
                 }
             ]
         }

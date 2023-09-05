@@ -105,8 +105,8 @@ section {
   flex-flow: column; }
   @media only screen and (min-width: 743px) {
     .intro {
-      min-height: 780px;
-      height: calc(100vh - 210px); } }
+      min-height: 750px;
+      height: calc(100vh - 250px); } }
 
 #template-target {
   display: flex;
@@ -122,7 +122,7 @@ section {
       #template-target .projects {
         width: calc((100% / 2) - 40px); }
         #template-target .projects:hover img {
-          transform: scale(1.132); } }
+          transform: scale(1.052); } }
     #template-target .projects h3 {
       font-size: 3.5rem;
       line-height: 1; }
