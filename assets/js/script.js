@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log("updated 2");
+    console.log("updated 4");
     
     $.getJSON( "template/projects.json", function( data ) {
         var items = [];
