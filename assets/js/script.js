@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log("updated 18");
+    console.log("updated 20");
     
     $.getJSON( "https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/projects.json", function( data ) {
         var items = [];
@@ -22,40 +22,53 @@ $(document).ready(function() {
         
     var offset = $('#header').outerHeight();
     
-    $('nav li').find('a[href^="#"]').click(function(event) { 
-            event.preventDefault();
+    $('nav li').find('a[href^="#"]').on("click", function(event) { 
+        event.preventDefault();
 
-            $('nav li a').removeClass("active");
-            $(this).addClass("active");
+        $('nav li a').removeClass("active");
+        $(this).addClass("active");
         
-            var anchorId = $(this).attr("href");
-            var target = $(anchorId).offset().top - offset + 5;
+        var anchorId = $(this).attr("href");
+        var target = $(anchorId).offset().top - offset + 5;
+        
+        $('html, body').animate({ 
+            scrollTop: target	
+        }, 500);
+
+    });
+        
+    function setActiveListElements(event){
+        var windowPos = $(window).scrollTop();
+
+        $('nav li a[href^="#"]').each(function() { 
+            var anchorId = $(this);
+            var target = $(anchorId.attr("href"));
+                
+            if (target.length > 0) {
+                if (target.position().top - $('#header').outerHeight() <= windowPos) {
+                    // console.log(target.position().top);
+                    // console.log(target);
+                    $('nav li a').removeClass("active");
+                    anchorId.addClass("active");
+                }
+            }
+        });
+    }
             
+    $(window).scroll(function() {
+        setActiveListElements();
+    });
+
+    setTimeout(() => {
+        $(".projects").on("click", function() {
+            var target = $("#Projects").offset().top - offset + 5;
             $('html, body').animate({ 
                 scrollTop: target	
             }, 500);
-
+            $("body").addClass("projects-change");
+            $(".projects").removeClass("focus");
+            $(this).addClass("focus");
         });
-        
-        function setActiveListElements(event){
-            var windowPos = $(window).scrollTop();
+    }, 500);
 
-            $('nav li a[href^="#"]').each(function() { 
-                var anchorId = $(this);
-                var target = $(anchorId.attr("href"));
-                
-                if (target.length > 0) {
-                    if (target.position().top - $('#header').outerHeight() <= windowPos) {
-                        console.log(target.position().top);
-                        console.log(target);
-                        $('nav li a').removeClass("active");
-                        anchorId.addClass("active");
-                    }
-                }
-            });
-        }
-            
-        $(window).scroll(function() {
-            setActiveListElements();
-        });
 });
