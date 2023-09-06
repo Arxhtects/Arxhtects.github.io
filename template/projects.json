@@ -38,6 +38,60 @@
                     "Github" : "https://github.com/Arxhtects/Fake-Android-Terminal"
                 }
             ]
+        },
+        {
+            "projecttitle" : "DMS",
+            "hashtags" : [
+                "node",
+                "php",
+                "electron js",
+                "desktop app",
+                "ui design"
+            ],
+            "color" : "#C15AC1",
+            "image" : "SWdms.webp",
+            "shortdescription" : "While working under sitewizard I developed a desktop app. It is used to speed up the process of building and selling websites. A form is generated, from the app. The client can fill out the form, and all the details necessary are provided to the designers in the application. They can then press 'build' this will then generate a base wordpress site on a  development link for our designers to work on. It will add all the plugins we use as a company, select the theme if the client chose one, setup the database and everything so that it is ready to start as soon as possible.",
+            "link" : [
+                {
+                }
+            ]
+        },
+        {
+            "projecttitle" : "Floaty Boxxy",
+            "hashtags" : [
+                "java",
+                "android",
+                "google play",
+                "android studio",
+                "open source"
+            ],
+            "color" : "#20DBA8",
+            "image" : "floatyboxxy.webp",
+            "shortdescription" : "My first playable game, released on the google play store. The concept is very simple and nothing more than tap to keep the box floating, avoid some boxes, collect others. The game was built in android studio and coded in java. This was simply a learning experience, but learned alot about coding with java.",
+            "link" : [
+                {
+                    "Github" : "https://github.com/Arxhtects/Floaty-Boxxy"
+                }
+            ]
+        },
+        {
+            "projecttitle" : "Banano Icecream",
+            "hashtags" : [
+                "Js",
+                "typescript",
+                "web 3",
+                "css"
+            ],
+            "color" : "#F6D919",
+            "image" : "bananoicecream.webp",
+            "shortdescription" : "This was part of a booster contest where people create new things for the banano cryptocurrency and win prizes. This came 5th out of 20 applicants. Developing a crawler for a chain that doesn't inherently support NFTs, Various developers and users of the cryptocurrency banano worked on creating a system for NFTs. Banano icecream is designed to find and crawl the metadata for NFTs. You can test it out with this banano address > ban_3i9hw6xuiqwgnkbmszyadubsynjysntsw6tkk98tg7qfj3f8nwzaqtkc5pw3.",
+            "link" : [
+                {
+                    "Website" : "https://arxhtects.github.io/bananoIcecream/",
+                    "Github" : "https://github.com/Arxhtects/Arxhtects.github.io/tree/main/bananoIcecream",
+                    "Booster Contest" : "https://banano.cc/blog/booster2-winners-announcement"
+                }
+            ]
         }
     ]
 }
