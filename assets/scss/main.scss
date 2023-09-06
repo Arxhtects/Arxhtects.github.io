@@ -136,11 +136,9 @@ section {
 #template-target {
     display: flex;
     flex-flow: row wrap;
-    margin-bottom: 40px;
+    gap: 40px;
     @media only screen and (min-width: 743px) {
-        margin-bottom: 0px;
         justify-content: space-between;
-        gap: 40px;
     }
     .projects {
         cursor: pointer;
@@ -198,7 +196,6 @@ footer {
     min-height: 660px;
     padding-bottom: 40px;
     position: relative;
-    background-position-y: -100px;    
     background-size: cover;
     .footer-end {
         font-size: 0.8rem;
