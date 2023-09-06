@@ -54,7 +54,8 @@ header {
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  top: 0; }
+  top: 0;
+  z-index: 22; }
   header .logo {
     background: #E2E3E5;
     height: 70px;
@@ -67,18 +68,19 @@ header {
     @media only screen and (min-width: 743px) {
       header ul {
         flex-flow: row; } }
-    header ul li {
+    header ul li a {
+      text-decoration: none;
       font-family: "EB Garamond", serif;
       font-weight: 400;
       font-size: 1.2rem;
       cursor: pointer; }
       @media only screen and (min-width: 743px) {
-        header ul li {
+        header ul li a {
           padding: 0px 20px;
           transition: all 0.32s ease-in-out;
           position: relative;
           top: 0; }
-          header ul li:after {
+          header ul li a:after {
             content: '';
             transition: all 0.32s ease-in-out;
             right: 0;
@@ -87,9 +89,9 @@ header {
             background: #000000;
             position: absolute;
             bottom: -10px; }
-          header ul li:hover, header ul li.active {
+          header ul li a:hover, header ul li a.active {
             top: -5px; }
-            header ul li:hover:after, header ul li.active:after {
+            header ul li a:hover:after, header ul li a.active:after {
               left: 0;
               right: auto;
               width: 100%; } }

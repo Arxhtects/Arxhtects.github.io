@@ -70,7 +70,8 @@ header {
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0;
+    top: 0;    
+    z-index: 22;
     .logo {
         background: $backgroundColor;
         height: 70px;    
@@ -85,31 +86,34 @@ header {
             flex-flow: row;
         }
         li {
-            font-family: $headerFont;
-            font-weight: 400;
-            font-size: 1.2rem;
-            cursor: pointer;
-            @media only screen and (min-width: 743px) {
-                padding: 0px 20px;
-                transition: $transition;
-                position: relative;
-                top: 0;
-                &:after {
-                    content: '';
+            a {
+                text-decoration: none;
+                font-family: $headerFont;
+                font-weight: 400;
+                font-size: 1.2rem;
+                cursor: pointer;
+                @media only screen and (min-width: 743px) {
+                    padding: 0px 20px;
                     transition: $transition;
-                    right: 0;
-                    width: 0%;
-                    height: 2px;
-                    background: $fontColor;    
-                    position: absolute;
-                    bottom: -10px;
-                }
-                &:hover, &.active {
-                    top: -5px;
+                    position: relative;
+                    top: 0;
                     &:after {
-                        left: 0;
-                        right: auto;
-                        width: 100%;
+                        content: '';
+                        transition: $transition;
+                        right: 0;
+                        width: 0%;
+                        height: 2px;
+                        background: $fontColor;    
+                        position: absolute;
+                        bottom: -10px;
+                    }
+                    &:hover, &.active {
+                        top: -5px;
+                        &:after {
+                            left: 0;
+                            right: auto;
+                            width: 100%;
+                        }
                     }
                 }
             }

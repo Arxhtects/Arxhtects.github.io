@@ -32,13 +32,11 @@ $(document).ready(function() {
             var target = $(anchorId).offset().top - offset + 5;
             
             $('html, body').animate({ scrollTop: target	}, 500, function () {
-                //window.location.hash = '!' + id;
                 window.location.hash = '#!' + anchorId.replace('#', '');		
             });
 
         });
         
-
         function setActiveListElements(event){
             var windowPos = $(window).scrollTop();
 
@@ -48,16 +46,16 @@ $(document).ready(function() {
                 
                 if (target.length > 0) {
                     if (target.position().top - $('#header').outerHeight() <= windowPos) {
+                        console.log(target.position().top);
+                        console.log(target);
                         $('nav li a').removeClass("active");
                         anchorId.addClass("active");
-                        
                         window.location.hash = '#!' + anchorId.attr('href').replace('#', '');
                     }
                 }
             });
         }
             
-        
         $(window).scroll(function() {
             setActiveListElements();
         });
