@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log("updated 13");
+    console.log("updated 18");
     
     $.getJSON( "https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/projects.json", function( data ) {
         var items = [];
@@ -22,10 +22,10 @@ $(document).ready(function() {
         
     var offset = $('#header').outerHeight();
     
-    $('nav ul li').find('a[href^="#"]').click(function(event) { 
+    $('nav li').find('a[href^="#"]').click(function(event) { 
             event.preventDefault();
 
-            $('nav ul li a').removeClass("active");
+            $('nav li a').removeClass("active");
             $(this).addClass("active");
         
             var anchorId = $(this).attr("href");
@@ -42,13 +42,13 @@ $(document).ready(function() {
         function setActiveListElements(event){
             var windowPos = $(window).scrollTop();
 
-            $('nav ul li a[href^="#"]').each(function() { 
+            $('nav li a[href^="#"]').each(function() { 
                 var anchorId = $(this);
                 var target = $(anchorId.attr("href"));
                 
                 if (target.length > 0) {
                     if (target.position().top - $('#header').outerHeight() <= windowPos) {
-                        $('nav ul li a').removeClass("active");
+                        $('nav li a').removeClass("active");
                         anchorId.addClass("active");
                         
                         window.location.hash = '#!' + anchorId.attr('href').replace('#', '');
