@@ -197,6 +197,41 @@ footer {
     padding-bottom: 40px;
     position: relative;
     background-size: cover;
+    .footer-middle {
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 600px;
+        h3 {
+            font-family: $headerFont;
+            font-size: 3rem;
+            max-width: 450px;
+        }
+        p { 
+            font-size: 1.6rem;
+            max-width: 450px;
+            @media only screen and (min-width: 743px) {
+                font-size: 2.3rem;
+            }
+        }
+        a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            border: solid 0.13rem black;
+            @media only screen and (min-width: 743px) {
+                transition: $transition;
+                background: transparent;
+                &:hover {
+                    background: $backgroundColor;
+                }
+            }
+        }
+    }
     .footer-end {
         font-size: 0.8rem;
         position: absolute;
