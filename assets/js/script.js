@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log("updated 9");
+    console.log("updated 12");
     
     $.getJSON( "https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/projects.json", function( data ) {
         var items = [];
@@ -18,4 +18,14 @@ $(document).ready(function() {
        
         $(items.join("")).appendTo("#template-target");
       });
+      
+      
+    var distance = $('#Projects').offset().top,
+    $window = $(window);
+
+    $window.scroll(function() {
+        if ( $window.scrollTop() >= distance ) {
+            console.log("woop woop");
+        }
+    });
 });
