@@ -31,9 +31,9 @@ $(document).ready(function() {
             var anchorId = $(this).attr("href");
             var target = $(anchorId).offset().top - offset + 5;
             
-            $('html, body').animate({ scrollTop: target	}, 500, function () {
-                window.location.hash = '#!' + anchorId.replace('#', '');		
-            });
+            $('html, body').animate({ 
+                scrollTop: target	
+            }, 500);
 
         });
         
@@ -50,7 +50,6 @@ $(document).ready(function() {
                         console.log(target);
                         $('nav li a').removeClass("active");
                         anchorId.addClass("active");
-                        window.location.hash = '#!' + anchorId.attr('href').replace('#', '');
                     }
                 }
             });
