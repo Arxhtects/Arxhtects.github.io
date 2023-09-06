@@ -75,24 +75,6 @@
             ]
         },
         {
-            "projecttitle" : "Pagey Transitions",
-            "hashtags" : [
-                "php",
-                "wordpress",
-                "plugin",
-                "open source",
-                "coffeescript"
-            ],
-            "color" : "#F95723",
-            "image" : "pageytransitions.webp",
-            "shortdescription" : "A very simple plugin, that adds page transitions to all internal links of a wordpress site. It was designed to be editable and opensource. You can set the colors of the loading animation, the page transitions, and select from a number of preset types or code your own.",
-            "link" : [
-                {
-                    "Github" : "https://github.com/Arxhtects/wizardy-pagey-transitions"
-                }
-            ]
-        },
-        {
             "projecttitle" : "N073_5",
             "hashtags" : [
                 "java",
@@ -112,20 +94,37 @@
             ]
         },
         {
-            "projecttitle" : "Floaty Boxxy",
+            "projecttitle" : "Pagey Transitions",
             "hashtags" : [
-                "java",
-                "android",
-                "google play",
-                "android studio",
+                "php",
+                "wordpress",
+                "plugin",
                 "open source"
             ],
-            "color" : "#20DBA8",
-            "image" : "floatyboxxy.webp",
-            "shortdescription" : "My first playable game, released on the google play store. The concept is very simple and nothing more than tap to keep the box floating, avoid some boxes, collect others. The game was built in android studio and coded in java. This was simply a learning experience, but learned alot about coding with java.",
+            "color" : "#F95723",
+            "image" : "pageytransitions.webp",
+            "shortdescription" : "A very simple plugin, that adds page transitions to all internal links of a wordpress site. It was designed to be editable and opensource. You can set the colors of the loading animation, the page transitions, and select from a number of preset types or code your own. There is a second additional plugin that can be added that adds a very simple light weight page animation, as you scroll you can make divs appear, and images show in various predefined ways and also code your own styled ones.",
             "link" : [
                 {
-                    "Github" : "https://github.com/Arxhtects/Floaty-Boxxy"
+                    "Github Transitions" : "https://github.com/Arxhtects/wizardy-pagey-transitions",
+                    "Github Animations" : "https://github.com/Arxhtects/wizardy-pagey-animations"
+                }
+            ]
+        },
+        {
+            "projecttitle" : "Onepage Scroll",
+            "hashtags" : [
+                "coffescript",
+                "js",
+                "open source"
+            ],
+            "color" : "#2EB3FF",
+            "image" : "singlescroll.webp",
+            "shortdescription" : "A very light weight, single scrolling page script. No jquery, pure vanilla javascript.",
+            "link" : [
+                {
+                    "Github" : "https://github.com/Arxhtects/LightWeight-Onepage-Scroll",
+                    "Codepen" : "https://github.com/Arxhtects/wizardy-pagey-animations"
                 }
             ]
         }
