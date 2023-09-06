@@ -120,7 +120,7 @@ section {
   #template-target .projects {
     cursor: pointer;
     width: 100%;
-    max-height: 500px;
+    max-height: 1000px;
     transition: all 0.5s cubic-bezier(0, 1, 0, 1); }
     .projects-change #template-target .projects {
       max-height: 0px;
@@ -128,7 +128,7 @@ section {
       transition: all 1s ease-in-out;
       overflow: hidden; }
     #template-target .projects.focus {
-      max-height: 500px;
+      max-height: 1000px;
       z-index: 5;
       width: 100%; }
     @media only screen and (min-width: 743px) {

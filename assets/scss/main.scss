@@ -154,11 +154,11 @@ section {
             overflow: hidden;
         }
         &.focus {
-            max-height: 500px;
+            max-height: 1000px;
             z-index: 5;
             width: 100%;
         }
-        max-height: 500px;
+        max-height: 1000px;
         transition: all 0.5s cubic-bezier(0, 1, 0, 1);
         @media only screen and (min-width: 743px) {
             width: calc((100% / 2) - 20px);
