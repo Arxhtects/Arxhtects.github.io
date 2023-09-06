@@ -110,17 +110,19 @@ section {
 
 #template-target {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  margin-bottom: 40px; }
   @media only screen and (min-width: 743px) {
     #template-target {
-      justify-content: center;
+      margin-bottom: 0px;
+      justify-content: space-between;
       gap: 40px; } }
   #template-target .projects {
     cursor: pointer;
     width: 100%; }
     @media only screen and (min-width: 743px) {
       #template-target .projects {
-        width: calc((100% / 2) - 40px); }
+        width: calc((100% / 2) - 20px); }
         #template-target .projects:hover img {
           transform: scale(1.052); } }
     #template-target .projects h3 {
