@@ -137,7 +137,7 @@ section {
       #template-target .projects ul li {
         padding: 5px 15px;
         background: #ededed;
-        border: solid 1px #d2d2d2;
+        box-shadow: inset 0px 1px 2.4px rgba(0, 0, 0, 0.19);
         border-radius: 50px;
         font-size: 0.8rem; }
         #template-target .projects ul li:before {
@@ -183,7 +183,12 @@ footer {
       text-decoration: none;
       padding: 20px 40px;
       border-radius: 50px;
-      border: solid 0.13rem black; }
+      box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19); }
+      footer .footer-middle a img {
+        height: 1.2rem;
+        padding-left: 30px;
+        position: relative;
+        top: 3px; }
       @media only screen and (min-width: 743px) {
         footer .footer-middle a {
           transition: all 0.32s ease-in-out;
