@@ -1,5 +1,8 @@
 $(document).ready(function() {
-    console.log("updated 20");
+    var x;
+    var y;
+
+    console.log("updated 21");
     
     $.getJSON( "https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/projects.json", function( data ) {
         var items = [];
@@ -77,8 +80,9 @@ $(document).ready(function() {
                 $(".projects").removeClass("focus");  
                 $(this).addClass("focus");
 
-                var x = $(this).position().left;
-                var y = $(this).position().top;
+                x = $(this).position().left;
+                y = $(this).position().top;
+
                 setTimeout(() => {  
                     $(this).css({
                         'position' : 'absolute',
@@ -109,4 +113,33 @@ $(document).ready(function() {
             }
         });
     }, 700);
+
+    $("#back").on("click", function() {
+        $(".projects").removeClass("expand");
+        setTimeout(() => { 
+            $("body").removeClass("project-focus");
+            $(".focus").css({
+                'position' : 'absolute',
+                'top' : 0,
+                'left' : 0
+            });
+            setTimeout(() => { 
+                $(".focus").css({
+                    'position' : 'absolute',
+                    'top' : y,
+                    'left' : x
+                });
+                $("body").removeClass("projects-change");
+                setTimeout(() => { 
+                    $(".focus").css({
+                        'position' : 'static',
+                        'top' : 0,
+                        'left' : 0
+                    });
+                    $("body").removeClass("projects-hide");
+                    $(".projects").removeClass("focus");  
+                }, 800);
+            }, 500);
+        }, 300);
+    });
 });
