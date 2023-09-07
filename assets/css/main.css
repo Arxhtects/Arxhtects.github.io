@@ -188,7 +188,7 @@ section {
         border-radius: 50px;
         box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19);
         display: inline-block;
-        margin-right: 20px; }
+        margin: 0px 20px 20px 0px; }
         @media only screen and (min-width: 743px) {
           #template-target .projects .description a {
             transition: all 0.32s ease-in-out;

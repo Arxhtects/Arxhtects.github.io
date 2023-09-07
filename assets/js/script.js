@@ -133,8 +133,8 @@ $(document).ready(function() {
                 setTimeout(() => { 
                     $(".focus").css({
                         'position' : 'static',
-                        'top' : 0,
-                        'left' : 0
+                        'top' : "auto",
+                        'left' : "auto"
                     });
                     $("body").removeClass("projects-hide");
                     $(".projects").removeClass("focus");  
