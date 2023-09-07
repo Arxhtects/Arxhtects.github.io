@@ -142,4 +142,9 @@ $(document).ready(function() {
             }, 500);
         }, 300);
     });
+
+    $(".toggle-menu").on("click", function() {
+        $("body").toggleClass("toggle-nav");
+    });
+
 });

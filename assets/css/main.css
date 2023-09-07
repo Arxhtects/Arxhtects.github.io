@@ -59,6 +59,28 @@ header {
   position: sticky;
   top: 0;
   z-index: 22; }
+  header nav {
+    height: 100vh;
+    position: fixed;
+    left: -75vw;
+    top: 0;
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    z-index: 2222222;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    transition: all 0.32s ease-in-out; }
+    .toggle-nav header nav {
+      left: 0; }
+    @media only screen and (min-width: 743px) {
+      header nav {
+        height: auto;
+        position: static;
+        width: auto;
+        display: inline-block;
+        background: transparent;
+        backdrop-filter: blur(0px); } }
   @media only screen and (min-width: 743px) {
     header {
       padding: 40px; } }
@@ -74,33 +96,46 @@ header {
     @media only screen and (min-width: 743px) {
       header ul {
         flex-flow: row; } }
-    header ul li a {
-      text-decoration: none;
-      font-family: "EB Garamond", serif;
-      font-weight: 400;
-      font-size: 1.2rem;
-      cursor: pointer; }
+    header ul li {
+      margin-bottom: 20px; }
       @media only screen and (min-width: 743px) {
-        header ul li a {
-          padding: 0px 20px;
+        header ul li {
+          margin-bottom: 0px; } }
+      header ul li a {
+        text-decoration: none;
+        font-family: "EB Garamond", serif;
+        font-weight: 400;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0px 20px;
+        transition: all 0.32s ease-in-out;
+        position: relative;
+        top: 0;
+        color: white; }
+        header ul li a:after {
+          content: '';
           transition: all 0.32s ease-in-out;
-          position: relative;
-          top: 0; }
-          header ul li a:after {
-            content: '';
-            transition: all 0.32s ease-in-out;
-            right: 0;
-            width: 0%;
-            height: 2px;
-            background: #000000;
-            position: absolute;
-            bottom: -10px; }
-          header ul li a:hover, header ul li a.active {
-            top: -5px; }
-            header ul li a:hover:after, header ul li a.active:after {
-              left: 0;
-              right: auto;
-              width: 100%; } }
+          right: 0;
+          width: 0%;
+          height: 10px;
+          position: absolute;
+          bottom: 0px;
+          background: white; }
+          @media only screen and (min-width: 743px) {
+            header ul li a:after {
+              background: #000000;
+              height: 2px;
+              bottom: -10px; } }
+        header ul li a:hover, header ul li a.active {
+          top: -5px; }
+          header ul li a:hover:after, header ul li a.active:after {
+            left: 0;
+            right: auto;
+            width: 100%; }
+        @media only screen and (min-width: 743px) {
+          header ul li a {
+            font-size: 1.2rem;
+            color: black; } }
 
 section {
   max-width: 1260px;
@@ -114,6 +149,45 @@ section {
     .intro {
       min-height: 750px;
       height: calc(100vh - 250px); } }
+
+.toggle-menu {
+  height: 20px;
+  width: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer; }
+  .toggle-menu .bar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    height: 2px;
+    width: 100%;
+    background: black;
+    left: 0;
+    opacity: 1;
+    transition: all 0.32s ease-in-out; }
+    .toggle-menu .bar:first-child {
+      top: 0%; }
+    .toggle-menu .bar:last-child {
+      top: 100%; }
+  .toggle-nav .toggle-menu .bar {
+    left: 100%;
+    opacity: 0; }
+    .toggle-nav .toggle-menu .bar:first-child {
+      left: 0;
+      opacity: 1;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg); }
+    .toggle-nav .toggle-menu .bar:last-child {
+      left: 0;
+      opacity: 1;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg); }
+  @media only screen and (min-width: 743px) {
+    .toggle-menu {
+      display: none; } }
 
 #return-wrapper {
   position: sticky;
