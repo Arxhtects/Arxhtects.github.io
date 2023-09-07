@@ -45,6 +45,9 @@ h2 {
 .sub-title {
   color: #a5a5a5; }
 
+main {
+  padding: 0px 40px; }
+
 header {
   max-width: 1560px;
   margin: 0 auto;
@@ -98,8 +101,7 @@ header {
 
 section {
   max-width: 1260px;
-  margin: 0 auto;
-  padding: 40px; }
+  margin: 0 auto; }
 
 .intro {
   display: flex;
@@ -113,22 +115,57 @@ section {
 #template-target {
   display: flex;
   flex-flow: row wrap;
-  gap: 40px; }
+  gap: 40px;
+  position: relative;
+  min-height: 450px; }
+  .projects-change #template-target {
+    gap: 0px; }
   @media only screen and (min-width: 743px) {
     #template-target {
-      justify-content: space-between; } }
+      justify-content: flex-start; } }
   #template-target .projects {
     cursor: pointer;
     width: 100%;
+    opacity: 1;
     max-height: 1000px;
     transition: all 0.5s cubic-bezier(0, 1, 0, 1); }
-    .projects-change #template-target .projects {
+    #template-target .projects .description {
       max-height: 0px;
-      width: 0px;
-      transition: all 1s ease-in-out;
-      overflow: hidden; }
-    #template-target .projects.focus {
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0, 1, 0, 1); }
+      #template-target .projects .description h4 {
+        font-size: 1.7rem;
+        font-family: "EB Garamond", serif;
+        padding-top: 30px; }
+    #template-target .projects.expand .description {
       max-height: 1000px;
+      transition: max-height 1s ease-in-out; }
+    .projects-hide #template-target .projects {
+      opacity: 0;
+      transition: all 0.3s ease-in-out; }
+      .projects-hide #template-target .projects ul {
+        display: flex;
+        flex-flow: nowrap; }
+      .projects-hide #template-target .projects h3 {
+        white-space: nowrap; }
+      .projects-hide #template-target .projects.focus {
+        opacity: 1; }
+        .projects-hide #template-target .projects.focus ul {
+          flex-flow: wrap; }
+        .projects-hide #template-target .projects.focus h3 {
+          white-space: inherit; }
+    .projects-change #template-target .projects {
+      transition: all 1s ease-in-out;
+      overflow: hidden;
+      max-height: 0px;
+      width: 0; }
+      .projects-change #template-target .projects.focus {
+        max-height: 2000px;
+        width: 100%; }
+        @media only screen and (min-width: 743px) {
+          .projects-change #template-target .projects.focus {
+            width: calc((100% / 2) - 20px); } }
+    .project-focus #template-target .projects.focus {
       z-index: 5;
       width: 100%; }
     @media only screen and (min-width: 743px) {

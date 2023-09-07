@@ -5,13 +5,13 @@
             "hashtags" : [
                 "ui design",
                 "jquery",
-                "js",
+                "web 3",
                 "chrome extension",
                 "open source"
             ],
             "color" : "#ECD959",
             "image" : "bantip.webp",
-            "shortdescription" : "An open source project, adding tip functionality to the banano sub reddit",
+            "shortdescription" : "<p><strong>An open source project, adding tip functionality to the crypto banano sub reddit.</p><p>The chrome extension was built to utilize the reddits tip bot which is difficult for new commers to instantly use. </p><p>Keeping track of your current tip bot balance and setting default tips is a simple use of this extension. Soon allowing the additional functionality of connecting your seed phrase to the wallet and all then being able to us it to tip people on other sites.</p><p>I intend to add it to twitter and other sites soon</p>",
             "link" : [
                 {
                     "Firefox" : "https://addons.mozilla.org/en-GB/firefox/addon/bantip-tip-banano-on-reddit/",
@@ -31,7 +31,7 @@
             ],
             "color" : "#C15AC1",
             "image" : "SWdms.webp",
-            "shortdescription" : "While working under sitewizard I developed a desktop app. It is used to speed up the process of building and selling websites. A form is generated, from the app. The client can fill out the form, and all the details necessary are provided to the designers in the application. They can then press 'build' this will then generate a base wordpress site on a  development link for our designers to work on. It will add all the plugins we use as a company, select the theme if the client chose one, setup the database and everything so that it is ready to start as soon as possible.",
+            "shortdescription" : "<p>While working under sitewizard I developed a desktop app. It is used to speed up the process of building and selling websites. A form is generated, from the app. </p><p>The client can fill out the form, and all the details necessary are provided to the designers in the application. They can then press 'build' this will then generate a base wordpress site on a  development link for our designers to work on. </p><p>It will add all the plugins we use as a company, select the theme if the client chose one, setup the database and everything so that it is ready to start as soon as possible.</p>",
             "link" : [
                 {
                 }
@@ -47,7 +47,7 @@
             ],
             "color" : "#F6D919",
             "image" : "bananoicecream.webp",
-            "shortdescription" : "This was part of a booster contest where people create new things for the banano cryptocurrency and win prizes. This came 5th out of 20 applicants. Developing a crawler for a chain that doesn't inherently support NFTs, Various developers and users of the cryptocurrency banano worked on creating a system for NFTs. Banano icecream is designed to find and crawl the metadata for NFTs. You can test it out with this banano address > ban_3i9hw6xuiqwgnkbmszyadubsynjysntsw6tkk98tg7qfj3f8nwzaqtkc5pw3.",
+            "shortdescription" : "<p>This was part of a booster contest where people create new things for the banano cryptocurrency and win prizes. This came 5th out of 20 applicants. </p><p>Developing a crawler for a chain that doesn't inherently support NFTs, Various developers and users of the cryptocurrency banano worked on creating a system for NFTs. Banano icecream is designed to find and crawl the metadata for NFTs. </p><p>You can test it out with this banano address > <strong>ban_3i9hw6xuiqwgnkbmszyadubsynjysntsw6tkk98tg7qfj3f8nwzaqtkc5pw3.</strong></p>",
             "link" : [
                 {
                     "Website" : "https://arxhtects.github.io/bananoIcecream/",
@@ -67,7 +67,7 @@
             ],
             "color" : "#20DBA8",
             "image" : "floatyboxxy.webp",
-            "shortdescription" : "My first playable game, released on the google play store. The concept is very simple and nothing more than tap to keep the box floating, avoid some boxes, collect others. The game was built in android studio and coded in java. This was simply a learning experience, but learned alot about coding with java.",
+            "shortdescription" : "<p><strong>My first playable game, released on the google play store.</strong> </p><p>The concept is very simple and nothing more than tap to keep the box floating, avoid some boxes, collect others. </p><p>The game was built in android studio and coded in java. This was simply a learning experience, but learned alot about coding with java.</p>",
             "link" : [
                 {
                     "Github" : "https://github.com/Arxhtects/Floaty-Boxxy"
@@ -84,7 +84,7 @@
             ],
             "color" : "#ffffff",
             "image" : "terminalnotetaker.webp",
-            "shortdescription" : "A lightweight, Note taking app designed to look like vim/cli based text editors",
+            "shortdescription" : "<p>A lightweight, Note taking app designed to look like vim/cli based text editors.</p><p>A Note taking app is super easy to make, however something i noticed was very few provided an ability to just take notes and transfer them easily while also being very light weight.</p><p>So I created a very simple android app that lets you create as many txt format files, very quickly. A note taking app I personally use regularly.</p>",
             "link" : [
                 {
                     "Article" : "https://android.gadgethacks.com/how-to/take-notes-terminal-interface-with-linux-style-app-0182127/",
@@ -103,7 +103,7 @@
             ],
             "color" : "#F95723",
             "image" : "pageytransitions.webp",
-            "shortdescription" : "A very simple plugin, that adds page transitions to all internal links of a wordpress site. It was designed to be editable and opensource. You can set the colors of the loading animation, the page transitions, and select from a number of preset types or code your own. There is a second additional plugin that can be added that adds a very simple light weight page animation, as you scroll you can make divs appear, and images show in various predefined ways and also code your own styled ones.",
+            "shortdescription" : "<p>A very simple plugin, that adds page transitions to all internal links of a wordpress site. It was designed to be editable and opensource. You can set the colors of the loading animation, the page transitions, and select from a number of preset types or code your own. </p><p>There is a second additional plugin that can be added that adds a very simple light weight page animation, as you scroll you can make divs appear, and images show in various predefined ways and also code your own styled ones.</p>",
             "link" : [
                 {
                     "Github Transitions" : "https://github.com/Arxhtects/wizardy-pagey-transitions",
@@ -120,7 +120,7 @@
             ],
             "color" : "#2EB3FF",
             "image" : "singlescroll.webp",
-            "shortdescription" : "A very light weight, single scrolling page script. No jquery, pure vanilla javascript.",
+            "shortdescription" : "<p>A very light weight, single scrolling page script. No jquery, pure vanilla javascript.</p>",
             "link" : [
                 {
                     "Github" : "https://github.com/Arxhtects/LightWeight-Onepage-Scroll",

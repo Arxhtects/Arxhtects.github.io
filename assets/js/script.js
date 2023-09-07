@@ -12,7 +12,10 @@ $(document).ready(function() {
                 });
             items.push("</ul>");
             items.push("<figure style='background: " + val.color + "'><img src='https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/project-banner/"+ val.image +"''></figure>");
-            //items.push("<p>" + val.shortdescription + "</p>");
+            items.push("<section class='description'>");
+            items.push("<h4>About the project</h4>");
+            items.push(val.shortdescription);
+            items.push("</section>");
             items.push("</div>");
         });
        
@@ -61,14 +64,42 @@ $(document).ready(function() {
 
     setTimeout(() => {
         $(".projects").on("click", function() {
-            var target = $("#Projects").offset().top - offset + 5;
-            $('html, body').animate({ 
-                scrollTop: target	
-            }, 500);
-            $("body").addClass("projects-change");
-            $(".projects").removeClass("focus");
-            $(this).addClass("focus");
-        });
-    }, 500);
+            if(!$(this).hasClass("focus")) {
+                var target = $("#Projects").offset().top - offset + 5;
+                $("body").addClass("projects-hide");
+                $(".projects").removeClass("focus");  
+                $(this).addClass("focus");
 
+                var x = $(this).position().left;
+                var y = $(this).position().top;
+                setTimeout(() => {  
+                    $(this).css({
+                        'position' : 'absolute',
+                        'top' : y,
+                        'left' : x
+                    });
+                    setTimeout(() => {  
+                        $('html, body').animate({ 
+                            scrollTop: target	
+                        }, 500);
+                        $("body").addClass("projects-change");
+                        $(this).css({
+                            'position' : 'absolute',
+                            'top' : 0,
+                            'left' : 0
+                        });
+                        setTimeout(() => { 
+                            $("body").addClass("project-focus");
+                            $(this).css({
+                                'position' : 'relative',
+                            });
+                            setTimeout(() => { 
+                                $(this).addClass("expand");
+                            }, 1000);
+                        }, 1000);
+                    }, 300);
+                }, 300);
+            }
+        });
+    }, 700);
 });
