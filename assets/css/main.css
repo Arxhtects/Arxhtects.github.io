@@ -51,7 +51,7 @@ main {
 header {
   max-width: 1560px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px 40px;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -59,6 +59,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 22; }
+  @media only screen and (min-width: 743px) {
+    header {
+      padding: 40px; } }
   header .logo {
     background: #E2E3E5;
     height: 70px;
@@ -112,6 +115,23 @@ section {
       min-height: 750px;
       height: calc(100vh - 250px); } }
 
+#return-wrapper {
+  position: sticky;
+  padding-bottom: 40px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  top: 160px;
+  z-index: 500; }
+  #return-wrapper #back {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background: blue; }
+    @media only screen and (min-width: 1570px) {
+      #return-wrapper #back {
+        left: -7%; } }
+
 #template-target {
   display: flex;
   flex-flow: row wrap;
@@ -136,7 +156,21 @@ section {
       #template-target .projects .description h4 {
         font-size: 1.7rem;
         font-family: "EB Garamond", serif;
+        font-style: italic;
         padding-top: 30px; }
+      #template-target .projects .description a {
+        text-decoration: none;
+        padding: 15px 40px;
+        border-radius: 50px;
+        box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19);
+        display: inline-block;
+        margin-right: 20px; }
+        @media only screen and (min-width: 743px) {
+          #template-target .projects .description a {
+            transition: all 0.32s ease-in-out;
+            background: transparent; }
+            #template-target .projects .description a:hover {
+              background: #ededed; } }
     #template-target .projects.expand .description {
       max-height: 1000px;
       transition: max-height 1s ease-in-out; }

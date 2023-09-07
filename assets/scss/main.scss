@@ -68,7 +68,7 @@ main {
 header {
     max-width: 1560px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 20px 40px;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -76,6 +76,9 @@ header {
     position: sticky;
     top: 0;    
     z-index: 22;
+    @media only screen and (min-width: 743px) {
+        padding: 40px;
+    }
     .logo {
         background: $backgroundColor;
         height: 70px;    
@@ -140,6 +143,25 @@ section {
     }
 }
 
+#return-wrapper {
+    position: sticky;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    top: 160px;
+    z-index: 500;
+    #back {    
+        position: relative;
+        height: 40px;
+        width: 40px;
+        background: blue;
+        @media only screen and (min-width: 1570px) {
+            left: -7%;
+        }
+    }
+}
+
 #template-target {
     display: flex;
     flex-flow: row wrap;
@@ -163,7 +185,23 @@ section {
             h4 {
                 font-size: 1.7rem;
                 font-family: $headerFont;
+                font-style: italic;
                 padding-top: 30px;
+            }
+            a {
+                text-decoration: none;
+                padding: 15px 40px;
+                border-radius: 50px;
+                box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.19);
+                display: inline-block;
+                margin-right: 20px;               
+                @media only screen and (min-width: 743px) {
+                    transition: $transition;
+                    background: transparent;
+                    &:hover {
+                        background: #ededed;
+                    }
+                }
             }
         }
         &.expand {    

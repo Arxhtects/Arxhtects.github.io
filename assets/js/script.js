@@ -7,14 +7,21 @@ $(document).ready(function() {
             items.push("<div id='project-id-" + key + "' class='projects'>");
             items.push("<h3>" + val.projecttitle + "</h3>");
             items.push("<ul class='hashtag-list'>");
-                $.each( data.project[key].hashtags, function( key, val ) {
+
+            $.each( data.project[key].hashtags, function( key, val ) {
                 items.push( "<li id='hashtag-id-" + key + "'>" + val + "</li>" );
-                });
+            });
+
             items.push("</ul>");
             items.push("<figure style='background: " + val.color + "'><img src='https://raw.githubusercontent.com/Arxhtects/Arxhtects.github.io/main/template/project-banner/"+ val.image +"''></figure>");
             items.push("<section class='description'>");
             items.push("<h4>About the project</h4>");
             items.push(val.shortdescription);
+            
+            $.each( data.project[key].link[0], function( key, val ) {
+                items.push( "<a href='" + val + "'>" + key + "</a>" );
+            });
+
             items.push("</section>");
             items.push("</div>");
         });
