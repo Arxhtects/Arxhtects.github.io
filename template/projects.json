@@ -11,7 +11,7 @@
             ],
             "color" : "#ECD959",
             "image" : "bantip.webp",
-            "shortdescription" : "<p><strong>An open source project, adding tip functionality to the crypto banano sub reddit.</p><p>The chrome extension was built to utilize the reddits tip bot which is difficult for new commers to instantly use. </p><p>Keeping track of your current tip bot balance and setting default tips is a simple use of this extension. Soon allowing the additional functionality of connecting your seed phrase to the wallet and all then being able to us it to tip people on other sites.</p><p>I intend to add it to twitter and other sites soon</p>",
+            "shortdescription" : "<p><strong>An open source project, adding tip functionality to the crypto banano sub reddit.</strong></p><p>The chrome extension was built to utilize the reddits tip bot which is difficult for new commers to instantly use. </p><p>Keeping track of your current tip bot balance and setting default tips is a simple use of this extension. Soon allowing the additional functionality of connecting your seed phrase to the wallet and all then being able to us it to tip people on other sites.</p><p>I intend to add it to twitter and other sites soon</p>",
             "link" : [
                 {
                     "Firefox" : "https://addons.mozilla.org/en-GB/firefox/addon/bantip-tip-banano-on-reddit/",
