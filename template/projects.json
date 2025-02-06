@@ -18,6 +18,23 @@
             ]
         },
         {
+            "projecttitle" : "Campaign Wizard",
+            "hashtags" : [
+                "ui/ux",
+                "express.js",
+                "API development",
+                "Web App",
+                "jQuery UI"
+            ],
+            "color" : "#ECD959",
+            "image" : "campaginmanager.png",
+            "shortdescription" : "<p><strong>A marketing campaign page builder with fully functioning drag and drop page designer</strong></p>A product normally used only buy our lead and marketing department. I built a system using express.js to replace the older depreciated system that existed previously.</p><p>I decided to take it one step further and I built a drag and drop page builder, for users to be able to design and build almost full one page websites as a landing page.</p>",
+            "link" : [
+                {
+                }
+            ]
+        },
+        {
             "projecttitle" : "Ban-Tip",
             "hashtags" : [
                 "ui design",
