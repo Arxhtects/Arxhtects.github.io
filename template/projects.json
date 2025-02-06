@@ -10,7 +10,7 @@
                 "Desktop App"
             ],
             "color" : "#ECD959",
-            "image" : "stagerdms.php",
+            "image" : "stagerdms.png",
             "shortdescription" : "<p><strong>A Full backend php built system to generate, archive and build wordpress sites on a cloud host with an a-joining react.js desktop application</strong></p><p>In order to stream line the work of our designers, and provide a better customer experiance, I built a full staging system on an aws host, That can build up to 20 woocomerce and wordpress sites. The sites can be quickly archived, Or un archived on a need to use basis.</p><p>The desktop app built in react, provides a ui/ux dashboard connection to the stager for our designers to easily interact with the php backend, the stager app provides full control and easily allows are designers to build, edit and archive wordpress sites.</p>",
             "link" : [
                 {
